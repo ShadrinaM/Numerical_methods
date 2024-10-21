@@ -8,10 +8,10 @@ namespace C_Forms
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Menu());
+            var menu = new Menu();
+            menu.FormClosed += (sender, args) => Application.Exit();  // Завершаем процесс, когда закрывается главное окно
+            Application.Run(menu);
         }
     }
 }

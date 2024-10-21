@@ -70,7 +70,7 @@
             // 
             BackToMenu.Location = new Point(15, 498);
             BackToMenu.Name = "BackToMenu";
-            BackToMenu.Size = new Size(75, 23);
+            BackToMenu.Size = new Size(111, 23);
             BackToMenu.TabIndex = 6;
             BackToMenu.Text = "BackToMenu";
             BackToMenu.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             label6.AutoSize = true;
             label6.BorderStyle = BorderStyle.FixedSingle;
             label6.Font = new Font("Segoe UI", 10F);
-            label6.Location = new Point(15, 457);
+            label6.Location = new Point(15, 474);
             label6.Name = "label6";
             label6.Size = new Size(47, 21);
             label6.TabIndex = 5;
@@ -92,7 +92,7 @@
             label5.AutoSize = true;
             label5.BorderStyle = BorderStyle.FixedSingle;
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(15, 424);
+            label5.Location = new Point(15, 453);
             label5.Name = "label5";
             label5.Size = new Size(47, 21);
             label5.TabIndex = 4;
@@ -103,7 +103,7 @@
             label4.AutoSize = true;
             label4.BorderStyle = BorderStyle.FixedSingle;
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(254, 257);
+            label4.Location = new Point(254, 280);
             label4.Name = "label4";
             label4.Size = new Size(47, 21);
             label4.TabIndex = 3;
@@ -125,7 +125,7 @@
             label2.AutoSize = true;
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(15, 257);
+            label2.Location = new Point(15, 280);
             label2.Name = "label2";
             label2.Size = new Size(47, 21);
             label2.TabIndex = 1;
@@ -151,6 +151,7 @@
             Controls.Add(plotView1);
             Name = "WindowLab4";
             Text = "WindowLab4";
+            FormClosed += WindowLab4_FormClosed;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

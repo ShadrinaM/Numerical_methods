@@ -15,7 +15,8 @@ namespace C_Forms
             this.StartPosition = FormStartPosition.CenterScreen;
             // Сохраняем ссылку на главное окно
             this.mainForm = menushka;
-
+            // Подписка на событие закрытия формы
+            this.FormClosed += WindowLab4_FormClosed;
             Lab4();
         }
 
@@ -208,5 +209,12 @@ namespace C_Forms
             // Закрываем текущее окно
             this.Close();
         }
+
+        private void WindowLab4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Показываем главное окно при закрытии текущего
+            mainForm.Show();
+        }
+
     }
 }
