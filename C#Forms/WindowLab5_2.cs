@@ -43,40 +43,56 @@ namespace C_Forms
 
         void Lab52()
         {
-            // Создаем объект для построения графиков
             var plotModel = new PlotModel { Title = "Аппроксимация методом наименьших квадратов" };
-
-            // Нанесем экспериментальные точки
             var pointsSeries = new ScatterSeries { MarkerType = MarkerType.Circle, MarkerSize = 4, MarkerFill = OxyColors.Red };
+
             for (int i = 0; i < x.Length; i++)
                 pointsSeries.Points.Add(new ScatterPoint(x[i], y[i]));
             plotModel.Series.Add(pointsSeries);
 
             // Линейная аппроксимация
-            var (aLin, bLin) = LinearApproximation();
+            var (aLin, bLin) = LinearApproximation(x, y);
             var linearSeries = CreateLineSeries(aLin, bLin, "Линейная: y = " + Math.Round(aLin, 2) + " + " + Math.Round(bLin, 2) + "x");
             plotModel.Series.Add(linearSeries);
+            double linearError = CalculateSumOfSquaredResiduals(xi => aLin + bLin * xi);
 
             // Степенная аппроксимация
             var (aPow, bPow) = PowerApproximation();
             var powerSeries = CreatePowerSeries(aPow, bPow, "Степенная: y = " + Math.Round(aPow, 2) + "x^" + Math.Round(bPow, 2));
             plotModel.Series.Add(powerSeries);
+            double powerError = CalculateSumOfSquaredResiduals(xi => aPow * Math.Pow(xi, bPow));
 
             // Показательная аппроксимация
             var (aExp, bExp) = ExponentialApproximation();
             var expSeries = CreateExpSeries(aExp, bExp, "Показательная: y = " + Math.Round(aExp, 2) + "e^(" + Math.Round(bExp, 2) + "x)");
             plotModel.Series.Add(expSeries);
+            double expError = CalculateSumOfSquaredResiduals(xi => aExp * Math.Exp(bExp * xi));
 
             // Квадратичная аппроксимация
             var (aQuad, bQuad, cQuad) = QuadraticApproximation();
             var quadSeries = CreateQuadraticSeries(aQuad, bQuad, cQuad, "Квадратичная: y = " + Math.Round(aQuad, 2) + " + " + Math.Round(bQuad, 2) + "x + " + Math.Round(cQuad, 2) + "x^2");
             plotModel.Series.Add(quadSeries);
+            double quadError = CalculateSumOfSquaredResiduals(xi => aQuad + bQuad * xi + cQuad * xi * xi);
 
             // Устанавливаем модель графика в plotView1
             plotView1.Model = plotModel;
-            // Заполнение TableLayoutPanel значениями
+
+            // Заполняем таблицу значениями
             FillTableLayoutPanel();
+
+            // Выводим суммарные погрешности
+            label2.Text = $"Линейная: {linearError:F4}\nСтепенная: {powerError:F4}\nПоказательная: {expError:F4}\nКвадратичная: {quadError:F4}";
+
+            // Определяем и выводим лучшую модель
+            double minError = Math.Min(Math.Min(linearError, powerError), Math.Min(expError, quadError));
+            string bestModel = "Линейная"; // предположим, что линейная модель лучше, а потом проверим
+            if (minError == powerError) bestModel = "Степенная";
+            else if (minError == expError) bestModel = "Показательная";
+            else if (minError == quadError) bestModel = "Квадратичная";
+
+            label3.Text = $"Лучшая модель: {bestModel} с ошибкой {minError:F4}";
         }
+
 
         //Заполнене таблицы
         private void FillTableLayoutPanel()
@@ -110,33 +126,14 @@ namespace C_Forms
             }
         }
 
-
-
-
-
         // Линейная аппроксимация для массивов x и y
         private (double a, double b) LinearApproximation(double[] x, double[] y)
         {
             double n = x.Length;
             double sumX = x.Sum();
             double sumY = y.Sum();
-            double sumXY = x.Zip(y, (xi, yi) => xi * yi).Sum();
-            double sumX2 = x.Sum(xi => xi * xi);
-
-            double b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
-            double a = (sumY - b * sumX) / n;
-
-            return (a, b);
-        }
-
-
-        // Линейная аппроксимация
-        private (double a, double b) LinearApproximation()
-        {
-            double n = x.Length;
-            double sumX = x.Sum();
-            double sumY = y.Sum();
-            double sumXY = x.Zip(y, (xi, yi) => xi * yi).Sum();
+            double sumXY = x.Zip(y, (xi, yi) => xi * yi).Sum(); 
+            //по лябда-выражению слеивает массив х и у в один, а потом его значения суммирует
             double sumX2 = x.Sum(xi => xi * xi);
 
             double b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
@@ -149,6 +146,7 @@ namespace C_Forms
         private (double a, double b) PowerApproximation()
         {
             var logX = x.Select(xi => Math.Log(xi)).ToArray();
+            //по лямбда-выражению меняет массив, преобразует в массив
             var logY = y.Select(yi => Math.Log(yi)).ToArray();
 
             var (aLog, bLog) = LinearApproximation(logX, logY);
@@ -170,13 +168,13 @@ namespace C_Forms
         private (double a, double b, double c) QuadraticApproximation()
         {
             double n = x.Length;
-            double sumX = x.Sum();
-            double sumX2 = x.Sum(xi => xi * xi);
-            double sumX3 = x.Sum(xi => xi * xi * xi);
-            double sumX4 = x.Sum(xi => xi * xi * xi * xi);
-            double sumY = y.Sum();
-            double sumXY = x.Zip(y, (xi, yi) => xi * yi).Sum();
-            double sumX2Y = x.Zip(y, (xi, yi) => xi * xi * yi).Sum();
+            double sumX = x.Sum(); //sum(x_i)
+            double sumX2 = x.Sum(xi => xi * xi); //sum(x_i^2)
+            double sumX3 = x.Sum(xi => xi * xi * xi); //sum(x_i^3)
+            double sumX4 = x.Sum(xi => xi * xi * xi * xi); //sum(x_i^4)
+            double sumY = y.Sum(); //sum(y_i)
+            double sumXY = x.Zip(y, (xi, yi) => xi * yi).Sum(); //sum(x_i*y_i)
+            double sumX2Y = x.Zip(y, (xi, yi) => xi * xi * yi).Sum(); //sum(x_i^2*y_i)
 
             // Решение системы линейных уравнений для нахождения a, b, c
             var matrix = new double[,] {
@@ -218,6 +216,19 @@ namespace C_Forms
             }
             return vector;
         }
+
+        //Метод для расчета суммарной погрешности
+        private double CalculateSumOfSquaredResiduals(Func<double, double> model)
+        {
+            double sumOfSquares = 0;
+            for (int i = 0; i < x.Length; i++)
+            {
+                double residual = y[i] - model(x[i]);
+                sumOfSquares += residual * residual; // сумма квадратов остатков
+            }
+            return sumOfSquares;
+        }
+
 
         // Вспомогательные методы для создания серий
         private LineSeries CreateLineSeries(double a, double b, string title)

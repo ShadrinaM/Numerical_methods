@@ -44,3 +44,4 @@ D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.genruntimeconfig.cache
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\ref\C#Forms.dll
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab5_2.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.Properties.Resources.resources

@@ -30,6 +30,8 @@
         {
             BackToMenu = new Button();
             panel1 = new Panel();
+            label3 = new Label();
+            label2 = new Label();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             plotView1 = new OxyPlot.WindowsForms.PlotView();
@@ -48,6 +50,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(tableLayoutPanel1);
             panel1.Controls.Add(BackToMenu);
@@ -56,14 +60,33 @@
             panel1.Size = new Size(472, 539);
             panel1.TabIndex = 1;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.Location = new Point(10, 367);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 17);
+            label3.TabIndex = 4;
+            label3.Text = "label3";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.Location = new Point(10, 236);
+            label2.Name = "label2";
+            label2.Size = new Size(43, 17);
+            label2.TabIndex = 3;
+            label2.Text = "label2";
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label1.Location = new Point(10, 15);
+            label1.Location = new Point(10, 45);
             label1.Name = "label1";
-            label1.Size = new Size(340, 30);
+            label1.Size = new Size(338, 28);
             label1.TabIndex = 2;
             label1.Text = "Исходная табличная зависимость:";
             // 
@@ -79,12 +102,12 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 43F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 42F));
             tableLayoutPanel1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            tableLayoutPanel1.Location = new Point(10, 60);
+            tableLayoutPanel1.Location = new Point(10, 90);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(328, 83);
+            tableLayoutPanel1.Size = new Size(340, 88);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // plotView1
@@ -120,5 +143,7 @@
         private OxyPlot.WindowsForms.PlotView plotView1;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
