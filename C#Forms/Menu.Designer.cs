@@ -33,6 +33,7 @@
             button3 = new Button();
             button4 = new Button();
             StartTask4 = new Button();
+            StartTask5_2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -81,11 +82,22 @@
             StartTask4.UseVisualStyleBackColor = true;
             StartTask4.Click += StartTask4_Click;
             // 
+            // StartTask5_2
+            // 
+            StartTask5_2.Location = new Point(12, 242);
+            StartTask5_2.Name = "StartTask5_2";
+            StartTask5_2.Size = new Size(127, 40);
+            StartTask5_2.TabIndex = 5;
+            StartTask5_2.Text = "Лабораторная 5";
+            StartTask5_2.UseVisualStyleBackColor = true;
+            StartTask5_2.Click += StartTask5_2_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(StartTask5_2);
             Controls.Add(StartTask4);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -103,5 +115,6 @@
         private Button button3;
         private Button button4;
         private Button StartTask4;
+        private Button StartTask5_2;
     }
 }

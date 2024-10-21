@@ -24,5 +24,12 @@ namespace C_Forms
             window.Show();
             this.Hide();
         }
+
+        private void StartTask5_2_Click(object sender, EventArgs e)
+        {
+            WindowLab5_2 window = new WindowLab5_2(this);
+            window.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GH7FCtPyRf8=",
+  "dgSpecHash": "iqwfurGb6rg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MM Shadrina\\source\\repos\\C#Forms\\C#Forms.csproj",
+  "projectFilePath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MM Shadrina\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
     "C:\\Users\\MM Shadrina\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",

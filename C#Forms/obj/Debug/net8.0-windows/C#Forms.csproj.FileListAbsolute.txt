@@ -20,3 +20,27 @@ C:\Users\MM Shadrina\source\repos\C#Forms\obj\Debug\net8.0-windows\refint\C#Form
 C:\Users\MM Shadrina\source\repos\C#Forms\obj\Debug\net8.0-windows\C#Forms.pdb
 C:\Users\MM Shadrina\source\repos\C#Forms\obj\Debug\net8.0-windows\C#Forms.genruntimeconfig.cache
 C:\Users\MM Shadrina\source\repos\C#Forms\obj\Debug\net8.0-windows\ref\C#Forms.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\C#Forms.exe
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\C#Forms.deps.json
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\C#Forms.runtimeconfig.json
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\C#Forms.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\C#Forms.pdb
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\MathNet.Numerics.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\OxyPlot.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\OxyPlot.WindowsForms.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.csproj.AssemblyReference.cache
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.Menu.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab4.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.csproj.GenerateResource.cache
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.AssemblyInfoInputs.cache
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.AssemblyInfo.cs
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.csproj.CoreCompileInputs.cache
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.sourcelink.json
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.csproj.Up2Date
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\refint\C#Forms.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.pdb
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.genruntimeconfig.cache
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\ref\C#Forms.dll
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab5_2.resources

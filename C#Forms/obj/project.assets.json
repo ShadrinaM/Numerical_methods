@@ -125,11 +125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MM Shadrina\\source\\repos\\C#Forms\\C#Forms.csproj",
+      "projectUniqueName": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
       "projectName": "C#Forms",
-      "projectPath": "C:\\Users\\MM Shadrina\\source\\repos\\C#Forms\\C#Forms.csproj",
+      "projectPath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
       "packagesPath": "C:\\Users\\MM Shadrina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MM Shadrina\\source\\repos\\C#Forms\\obj\\",
+      "outputPath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MM Shadrina\\AppData\\Roaming\\NuGet\\NuGet.Config",

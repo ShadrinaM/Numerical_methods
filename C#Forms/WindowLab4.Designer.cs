@@ -45,7 +45,7 @@
             plotView1.Location = new Point(12, 12);
             plotView1.Name = "plotView1";
             plotView1.PanCursor = Cursors.Hand;
-            plotView1.Size = new Size(488, 537);
+            plotView1.Size = new Size(482, 537);
             plotView1.TabIndex = 0;
             plotView1.Text = "plotView1";
             plotView1.ZoomHorizontalCursor = Cursors.SizeWE;
@@ -61,16 +61,16 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(506, 12);
+            panel1.Location = new Point(500, 10);
             panel1.Name = "panel1";
-            panel1.Size = new Size(466, 537);
+            panel1.Size = new Size(472, 539);
             panel1.TabIndex = 1;
             // 
             // BackToMenu
             // 
-            BackToMenu.Location = new Point(15, 498);
+            BackToMenu.Location = new Point(370, 513);
             BackToMenu.Name = "BackToMenu";
-            BackToMenu.Size = new Size(111, 23);
+            BackToMenu.Size = new Size(99, 23);
             BackToMenu.TabIndex = 6;
             BackToMenu.Text = "BackToMenu";
             BackToMenu.UseVisualStyleBackColor = true;
