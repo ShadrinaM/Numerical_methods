@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj": {}
+    "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj": {}
   },
   "projects": {
-    "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj": {
+    "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+        "projectUniqueName": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
         "projectName": "C#Forms",
-        "projectPath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
-        "packagesPath": "C:\\Users\\MM Shadrina\\.nuget\\packages\\",
-        "outputPath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\obj\\",
+        "projectPath": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+        "packagesPath": "C:\\Users\\Марина\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MM Shadrina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Марина\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

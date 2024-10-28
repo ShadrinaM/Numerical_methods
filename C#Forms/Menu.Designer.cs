@@ -44,9 +44,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe Print", 15.75F);
-            button1.Location = new Point(36, 158);
+            button1.Location = new Point(41, 211);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(339, 54);
+            button1.Size = new Size(450, 72);
             button1.TabIndex = 0;
             button1.Text = "Лабораторная работа 1";
             button1.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             // button2
             // 
             button2.Font = new Font("Segoe Print", 15.75F);
-            button2.Location = new Point(36, 218);
+            button2.Location = new Point(41, 291);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(339, 54);
+            button2.Size = new Size(450, 72);
             button2.TabIndex = 1;
             button2.Text = "Лабораторная работа 2";
             button2.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // button3
             // 
             button3.Font = new Font("Segoe Print", 15.75F);
-            button3.Location = new Point(36, 278);
+            button3.Location = new Point(41, 371);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(339, 54);
+            button3.Size = new Size(450, 72);
             button3.TabIndex = 2;
             button3.Text = "Лабораторная работа 3_1";
             button3.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // button4
             // 
             button4.Font = new Font("Segoe Print", 15.75F);
-            button4.Location = new Point(36, 338);
+            button4.Location = new Point(41, 451);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(339, 54);
+            button4.Size = new Size(450, 72);
             button4.TabIndex = 3;
             button4.Text = "Лабораторная работа 3_2";
             button4.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // StartTask4
             // 
             StartTask4.Font = new Font("Segoe Print", 15.75F);
-            StartTask4.Location = new Point(36, 398);
+            StartTask4.Location = new Point(41, 531);
+            StartTask4.Margin = new Padding(3, 4, 3, 4);
             StartTask4.Name = "StartTask4";
-            StartTask4.Size = new Size(339, 54);
+            StartTask4.Size = new Size(450, 72);
             StartTask4.TabIndex = 4;
             StartTask4.Text = "Лабораторная работа 4";
             StartTask4.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@
             // StartTask5_2
             // 
             StartTask5_2.Font = new Font("Segoe Print", 15.75F);
-            StartTask5_2.Location = new Point(36, 458);
+            StartTask5_2.Location = new Point(41, 611);
+            StartTask5_2.Margin = new Padding(3, 4, 3, 4);
             StartTask5_2.Name = "StartTask5_2";
-            StartTask5_2.Size = new Size(339, 54);
+            StartTask5_2.Size = new Size(450, 72);
             StartTask5_2.TabIndex = 5;
             StartTask5_2.Text = "Лабораторная работа 5_2";
             StartTask5_2.UseVisualStyleBackColor = true;
@@ -107,9 +113,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe Print", 25F);
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(14, 12);
             label1.Name = "label1";
-            label1.Size = new Size(713, 118);
+            label1.Size = new Size(881, 148);
             label1.TabIndex = 6;
             label1.Text = "Лабораторные работы по предмету \r\n\"Методы вычислений\"";
             // 
@@ -117,9 +123,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe Print", 15.75F);
-            label2.Location = new Point(700, 91);
+            label2.Location = new Point(735, 113);
             label2.Name = "label2";
-            label2.Size = new Size(272, 36);
+            label2.Size = new Size(354, 47);
             label2.TabIndex = 7;
             label2.Text = "Шадрина Марина 35/1";
             // 
@@ -127,18 +133,19 @@
             // 
             pictureBox1.AccessibleRole = AccessibleRole.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(381, 158);
+            pictureBox1.Location = new Point(604, 211);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(591, 354);
+            pictureBox1.Size = new Size(485, 472);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 561);
+            ClientSize = new Size(1125, 748);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -148,6 +155,7 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Menu";
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
