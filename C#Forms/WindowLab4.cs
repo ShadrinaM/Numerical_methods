@@ -39,7 +39,7 @@ namespace C_Forms
             // Задание начального приближения
             double[] initialGuess = { 0.0, 0.0, 0.0, 0.0 };
 
-            double tolerance = 1e-6;  // точность
+            double tolerance = 1e-10;  // точность
             int maxIterations = 1000; // максимальное количество итераций
 
 

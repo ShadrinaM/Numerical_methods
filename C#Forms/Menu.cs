@@ -31,5 +31,12 @@ namespace C_Forms
             window.Show();
             this.Hide();
         }
+
+        private void StartTask3_2_Click(object sender, EventArgs e)
+        {
+            WindowLab3_2 window = new WindowLab3_2(this);
+            window.Show();
+            this.Hide();
+        }
     }
 }

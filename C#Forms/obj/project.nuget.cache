@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mRUb5uEHxPsDk9BxY76qU5pBqmbDPKmm0s6K1bkv7ozRtbPGbIS1Rzcchh5hQVGYYvD7QgT71Ekl3r8RwSEWig==",
+  "dgSpecHash": "4iRSeMFmJYr/i8SopU6PyXdEz/TojuZtHA0rNunZ1pLnH03xzAEaAG5qflD9a+/t8nJ4X/cP9Lyke1QPN9y/pQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+  "projectFilePath": "C:\\Users\\Марина\\Desktop\\Методы вычислений 25.10.24\\C#Forms\\C#Forms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Марина\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
     "C:\\Users\\Марина\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",

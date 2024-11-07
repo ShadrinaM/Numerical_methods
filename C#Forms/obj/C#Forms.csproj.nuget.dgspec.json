@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj": {}
+    "C:\\Users\\Марина\\Desktop\\Методы вычислений 25.10.24\\C#Forms\\C#Forms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj": {
+    "C:\\Users\\Марина\\Desktop\\Методы вычислений 25.10.24\\C#Forms\\C#Forms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+        "projectUniqueName": "C:\\Users\\Марина\\Desktop\\Методы вычислений 25.10.24\\C#Forms\\C#Forms.csproj",
         "projectName": "C#Forms",
-        "projectPath": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+        "projectPath": "C:\\Users\\Марина\\Desktop\\Методы вычислений 25.10.24\\C#Forms\\C#Forms.csproj",
         "packagesPath": "C:\\Users\\Марина\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Марина\\Documents\\GitHub\\Numerical_methods\\C#Forms\\obj\\",
+        "outputPath": "C:\\Users\\Марина\\Desktop\\Методы вычислений 25.10.24\\C#Forms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Марина\\AppData\\Roaming\\NuGet\\NuGet.Config",
