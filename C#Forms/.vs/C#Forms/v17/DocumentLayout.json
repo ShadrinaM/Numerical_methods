@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\\u043C\u0430\u0440\u0438\u043D\u0430\\documents\\github\\numerical_methods\\c#forms\\windowlab4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\\u041C\u0430\u0440\u0438\u043D\u0430\\Documents\\GitHub\\Numerical_methods\\C#Forms\\windowlab4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\\u043C\u0430\u0440\u0438\u043D\u0430\\documents\\github\\numerical_methods\\c#forms\\windowlab3_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\\u041C\u0430\u0440\u0438\u043D\u0430\\Documents\\GitHub\\Numerical_methods\\C#Forms\\windowlab3_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab3_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "WindowLab4.cs",
               "ToolTip": "C:\\Users\\\u041C\u0430\u0440\u0438\u043D\u0430\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab4.cs",
               "RelativeToolTip": "WindowLab4.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwCkAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T20:44:29.828Z",
               "EditorCaption": ""
@@ -58,8 +58,7 @@
               "ToolTip": "C:\\Users\\\u041C\u0430\u0440\u0438\u043D\u0430\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "RelativeToolTip": "WindowLab4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T20:44:20.104Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "WhenOpened": "2024-11-14T20:44:20.104Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "WindowLab3_2.cs",
               "ViewState": "AQIAALQAAAAAAAAAAAAmwMsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T12:11:03.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T12:11:03.102Z"
             },
             {
               "$type": "Document",
