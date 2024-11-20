@@ -96,3 +96,4 @@ C:\Users\Марина\Desktop\Методы вычислений 25.10.24\C#Forms
 C:\Users\Марина\Desktop\Методы вычислений 25.10.24\C#Forms\obj\Debug\net8.0-windows\ref\C#Forms.dll
 C:\Users\Марина\Desktop\Методы вычислений 25.10.24\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab3_2.resources
 C:\Users\Марина\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab3_2.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab3_2.resources
