@@ -17,14 +17,18 @@ namespace C_Forms
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
+        private void StartTask3_2_Click(object sender, EventArgs e)
+        {
+            WindowLab3_2 window = new WindowLab3_2(this);
+            window.Show();
+            this.Hide();
+        }
         private void StartTask4_Click(object sender, EventArgs e)
         {
             WindowLab4 window = new WindowLab4(this);
             window.Show();
             this.Hide();
         }
-
         private void StartTask5_2_Click(object sender, EventArgs e)
         {
             WindowLab5_2 window = new WindowLab5_2(this);
@@ -32,9 +36,9 @@ namespace C_Forms
             this.Hide();
         }
 
-        private void StartTask3_2_Click(object sender, EventArgs e)
+        private void StartTask5_1_Click(object sender, EventArgs e)
         {
-            WindowLab3_2 window = new WindowLab3_2(this);
+            WindowLab5_1 window = new WindowLab5_1(this);
             window.Show();
             this.Hide();
         }
