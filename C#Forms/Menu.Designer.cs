@@ -50,10 +50,9 @@
             // StartTask1
             // 
             StartTask1.Font = new Font("Segoe Print", 15.75F);
-            StartTask1.Location = new Point(47, 195);
-            StartTask1.Margin = new Padding(3, 4, 3, 4);
+            StartTask1.Location = new Point(41, 164);
             StartTask1.Name = "StartTask1";
-            StartTask1.Size = new Size(486, 72);
+            StartTask1.Size = new Size(425, 54);
             StartTask1.TabIndex = 0;
             StartTask1.Text = "Лабораторная работа 1";
             StartTask1.UseVisualStyleBackColor = true;
@@ -61,10 +60,9 @@
             // StartTask2
             // 
             StartTask2.Font = new Font("Segoe Print", 15.75F);
-            StartTask2.Location = new Point(47, 275);
-            StartTask2.Margin = new Padding(3, 4, 3, 4);
+            StartTask2.Location = new Point(41, 224);
             StartTask2.Name = "StartTask2";
-            StartTask2.Size = new Size(486, 72);
+            StartTask2.Size = new Size(425, 54);
             StartTask2.TabIndex = 1;
             StartTask2.Text = "Лабораторная работа 2";
             StartTask2.UseVisualStyleBackColor = true;
@@ -72,10 +70,9 @@
             // StartTask3_1
             // 
             StartTask3_1.Font = new Font("Segoe Print", 15.75F);
-            StartTask3_1.Location = new Point(47, 355);
-            StartTask3_1.Margin = new Padding(3, 4, 3, 4);
+            StartTask3_1.Location = new Point(41, 284);
             StartTask3_1.Name = "StartTask3_1";
-            StartTask3_1.Size = new Size(486, 72);
+            StartTask3_1.Size = new Size(425, 54);
             StartTask3_1.TabIndex = 2;
             StartTask3_1.Text = "Лабораторная работа 3_1";
             StartTask3_1.UseVisualStyleBackColor = true;
@@ -83,10 +80,9 @@
             // StartTask3_2
             // 
             StartTask3_2.Font = new Font("Segoe Print", 15.75F);
-            StartTask3_2.Location = new Point(47, 435);
-            StartTask3_2.Margin = new Padding(3, 4, 3, 4);
+            StartTask3_2.Location = new Point(41, 344);
             StartTask3_2.Name = "StartTask3_2";
-            StartTask3_2.Size = new Size(486, 72);
+            StartTask3_2.Size = new Size(425, 54);
             StartTask3_2.TabIndex = 3;
             StartTask3_2.Text = "Лабораторная работа 3_2";
             StartTask3_2.UseVisualStyleBackColor = true;
@@ -95,10 +91,9 @@
             // StartTask4
             // 
             StartTask4.Font = new Font("Segoe Print", 15.75F);
-            StartTask4.Location = new Point(47, 515);
-            StartTask4.Margin = new Padding(3, 4, 3, 4);
+            StartTask4.Location = new Point(41, 404);
             StartTask4.Name = "StartTask4";
-            StartTask4.Size = new Size(486, 72);
+            StartTask4.Size = new Size(425, 54);
             StartTask4.TabIndex = 4;
             StartTask4.Text = "Лабораторная работа 4";
             StartTask4.UseVisualStyleBackColor = true;
@@ -107,10 +102,9 @@
             // StartTask5_2
             // 
             StartTask5_2.Font = new Font("Segoe Print", 15.75F);
-            StartTask5_2.Location = new Point(47, 595);
-            StartTask5_2.Margin = new Padding(3, 4, 3, 4);
+            StartTask5_2.Location = new Point(41, 464);
             StartTask5_2.Name = "StartTask5_2";
-            StartTask5_2.Size = new Size(486, 72);
+            StartTask5_2.Size = new Size(425, 54);
             StartTask5_2.TabIndex = 5;
             StartTask5_2.Text = "Лабораторная работа 5_2";
             StartTask5_2.UseVisualStyleBackColor = true;
@@ -120,9 +114,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe Print", 25F);
-            label1.Location = new Point(14, 12);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(881, 148);
+            label1.Size = new Size(713, 118);
             label1.TabIndex = 6;
             label1.Text = "Лабораторные работы по предмету \r\n\"Методы вычислений\"";
             // 
@@ -130,9 +124,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe Print", 15.75F);
-            label2.Location = new Point(541, 103);
+            label2.Location = new Point(473, 77);
             label2.Name = "label2";
-            label2.Size = new Size(354, 47);
+            label2.Size = new Size(272, 36);
             label2.TabIndex = 7;
             label2.Text = "Шадрина Марина 35/1";
             // 
@@ -140,10 +134,9 @@
             // 
             pictureBox1.AccessibleRole = AccessibleRole.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(956, 40);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(836, 30);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(113, 110);
+            pictureBox1.Size = new Size(99, 82);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -151,10 +144,9 @@
             // StartTask5_1
             // 
             StartTask5_1.Font = new Font("Segoe Print", 15.75F);
-            StartTask5_1.Location = new Point(583, 195);
-            StartTask5_1.Margin = new Padding(3, 4, 3, 4);
+            StartTask5_1.Location = new Point(510, 164);
             StartTask5_1.Name = "StartTask5_1";
-            StartTask5_1.Size = new Size(486, 72);
+            StartTask5_1.Size = new Size(425, 54);
             StartTask5_1.TabIndex = 9;
             StartTask5_1.Text = "Лабораторная работа 5_1";
             StartTask5_1.UseVisualStyleBackColor = true;
@@ -163,10 +155,9 @@
             // StartTask6
             // 
             StartTask6.Font = new Font("Segoe Print", 15.75F);
-            StartTask6.Location = new Point(583, 275);
-            StartTask6.Margin = new Padding(3, 4, 3, 4);
+            StartTask6.Location = new Point(510, 224);
             StartTask6.Name = "StartTask6";
-            StartTask6.Size = new Size(486, 72);
+            StartTask6.Size = new Size(425, 54);
             StartTask6.TabIndex = 10;
             StartTask6.Text = "Лабораторная работа 6";
             StartTask6.UseVisualStyleBackColor = true;
@@ -175,10 +166,9 @@
             // StartTask7_1
             // 
             StartTask7_1.Font = new Font("Segoe Print", 15.75F);
-            StartTask7_1.Location = new Point(583, 355);
-            StartTask7_1.Margin = new Padding(3, 4, 3, 4);
+            StartTask7_1.Location = new Point(510, 284);
             StartTask7_1.Name = "StartTask7_1";
-            StartTask7_1.Size = new Size(486, 72);
+            StartTask7_1.Size = new Size(425, 54);
             StartTask7_1.TabIndex = 11;
             StartTask7_1.Text = "Лабораторная работа 7_1";
             StartTask7_1.UseVisualStyleBackColor = true;
@@ -187,10 +177,9 @@
             // StartTask8
             // 
             StartTask8.Font = new Font("Segoe Print", 15.75F);
-            StartTask8.Location = new Point(583, 435);
-            StartTask8.Margin = new Padding(3, 4, 3, 4);
+            StartTask8.Location = new Point(510, 344);
             StartTask8.Name = "StartTask8";
-            StartTask8.Size = new Size(486, 72);
+            StartTask8.Size = new Size(425, 54);
             StartTask8.TabIndex = 12;
             StartTask8.Text = "Лабораторная работа 8";
             StartTask8.UseVisualStyleBackColor = true;
@@ -199,10 +188,9 @@
             // StartTask9
             // 
             StartTask9.Font = new Font("Segoe Print", 15.75F);
-            StartTask9.Location = new Point(583, 515);
-            StartTask9.Margin = new Padding(3, 4, 3, 4);
+            StartTask9.Location = new Point(510, 404);
             StartTask9.Name = "StartTask9";
-            StartTask9.Size = new Size(486, 72);
+            StartTask9.Size = new Size(425, 54);
             StartTask9.TabIndex = 13;
             StartTask9.Text = "Лабораторная работа 9";
             StartTask9.UseVisualStyleBackColor = true;
@@ -210,19 +198,18 @@
             // StartTask10
             // 
             StartTask10.Font = new Font("Segoe Print", 15.75F);
-            StartTask10.Location = new Point(583, 595);
-            StartTask10.Margin = new Padding(3, 4, 3, 4);
+            StartTask10.Location = new Point(510, 464);
             StartTask10.Name = "StartTask10";
-            StartTask10.Size = new Size(486, 72);
+            StartTask10.Size = new Size(425, 54);
             StartTask10.TabIndex = 14;
             StartTask10.Text = "Лабораторная работа 10";
             StartTask10.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1125, 717);
+            ClientSize = new Size(984, 561);
             Controls.Add(StartTask10);
             Controls.Add(StartTask9);
             Controls.Add(StartTask8);
@@ -238,7 +225,6 @@
             Controls.Add(StartTask3_1);
             Controls.Add(StartTask2);
             Controls.Add(StartTask1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Menu";
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

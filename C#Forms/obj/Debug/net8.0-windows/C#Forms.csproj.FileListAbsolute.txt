@@ -127,3 +127,7 @@ C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-wind
 C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab6.resources
 C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab7_1.resources
 C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab8.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab5_1.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab6.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab7_1.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab8.resources

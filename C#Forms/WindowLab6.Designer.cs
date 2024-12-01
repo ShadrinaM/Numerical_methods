@@ -32,14 +32,17 @@
             // 
             // WindowLab6
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1125, 748);
+            ClientSize = new Size(984, 561);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "WindowLab6";
             Text = "WindowLab6";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private OxyPlot.WindowsForms.PlotView plotView;
     }
 }
