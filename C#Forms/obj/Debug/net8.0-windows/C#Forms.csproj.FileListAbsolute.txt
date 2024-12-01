@@ -124,3 +124,6 @@ C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-wind
 C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.genruntimeconfig.cache
 C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\ref\C#Forms.dll
 C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab5_1.resources
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab6.resources
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab7_1.resources
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab8.resources

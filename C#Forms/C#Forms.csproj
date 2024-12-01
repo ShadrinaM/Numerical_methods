@@ -20,6 +20,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="WindowLab8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WindowLab7_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WindowLab6.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

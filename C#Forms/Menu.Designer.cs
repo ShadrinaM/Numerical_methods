@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            StartTask1 = new Button();
+            StartTask2 = new Button();
+            StartTask3_1 = new Button();
             StartTask3_2 = new Button();
             StartTask4 = new Button();
             StartTask5_2 = new Button();
@@ -39,45 +39,46 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             StartTask5_1 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            StartTask6 = new Button();
+            StartTask7_1 = new Button();
+            StartTask8 = new Button();
+            StartTask9 = new Button();
+            StartTask10 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // StartTask1
             // 
-            button1.Font = new Font("Segoe Print", 15.75F);
-            button1.Location = new Point(47, 195);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(486, 72);
-            button1.TabIndex = 0;
-            button1.Text = "Лабораторная работа 1";
-            button1.UseVisualStyleBackColor = true;
+            StartTask1.Font = new Font("Segoe Print", 15.75F);
+            StartTask1.Location = new Point(47, 195);
+            StartTask1.Margin = new Padding(3, 4, 3, 4);
+            StartTask1.Name = "StartTask1";
+            StartTask1.Size = new Size(486, 72);
+            StartTask1.TabIndex = 0;
+            StartTask1.Text = "Лабораторная работа 1";
+            StartTask1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // StartTask2
             // 
-            button2.Font = new Font("Segoe Print", 15.75F);
-            button2.Location = new Point(47, 275);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(486, 72);
-            button2.TabIndex = 1;
-            button2.Text = "Лабораторная работа 2";
-            button2.UseVisualStyleBackColor = true;
+            StartTask2.Font = new Font("Segoe Print", 15.75F);
+            StartTask2.Location = new Point(47, 275);
+            StartTask2.Margin = new Padding(3, 4, 3, 4);
+            StartTask2.Name = "StartTask2";
+            StartTask2.Size = new Size(486, 72);
+            StartTask2.TabIndex = 1;
+            StartTask2.Text = "Лабораторная работа 2";
+            StartTask2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // StartTask3_1
             // 
-            button3.Font = new Font("Segoe Print", 15.75F);
-            button3.Location = new Point(47, 355);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(486, 72);
-            button3.TabIndex = 2;
-            button3.Text = "Лабораторная работа 3_1";
-            button3.UseVisualStyleBackColor = true;
+            StartTask3_1.Font = new Font("Segoe Print", 15.75F);
+            StartTask3_1.Location = new Point(47, 355);
+            StartTask3_1.Margin = new Padding(3, 4, 3, 4);
+            StartTask3_1.Name = "StartTask3_1";
+            StartTask3_1.Size = new Size(486, 72);
+            StartTask3_1.TabIndex = 2;
+            StartTask3_1.Text = "Лабораторная работа 3_1";
+            StartTask3_1.UseVisualStyleBackColor = true;
             // 
             // StartTask3_2
             // 
@@ -159,59 +160,74 @@
             StartTask5_1.UseVisualStyleBackColor = true;
             StartTask5_1.Click += StartTask5_1_Click;
             // 
-            // button5
+            // StartTask6
             // 
-            button5.Font = new Font("Segoe Print", 15.75F);
-            button5.Location = new Point(583, 275);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(486, 72);
-            button5.TabIndex = 10;
-            button5.Text = "Лабораторная работа 6";
-            button5.UseVisualStyleBackColor = true;
+            StartTask6.Font = new Font("Segoe Print", 15.75F);
+            StartTask6.Location = new Point(583, 275);
+            StartTask6.Margin = new Padding(3, 4, 3, 4);
+            StartTask6.Name = "StartTask6";
+            StartTask6.Size = new Size(486, 72);
+            StartTask6.TabIndex = 10;
+            StartTask6.Text = "Лабораторная работа 6";
+            StartTask6.UseVisualStyleBackColor = true;
+            StartTask6.Click += StartTask6_Click;
             // 
-            // button6
+            // StartTask7_1
             // 
-            button6.Font = new Font("Segoe Print", 15.75F);
-            button6.Location = new Point(583, 355);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(486, 72);
-            button6.TabIndex = 11;
-            button6.Text = "Лабораторная работа 6";
-            button6.UseVisualStyleBackColor = true;
+            StartTask7_1.Font = new Font("Segoe Print", 15.75F);
+            StartTask7_1.Location = new Point(583, 355);
+            StartTask7_1.Margin = new Padding(3, 4, 3, 4);
+            StartTask7_1.Name = "StartTask7_1";
+            StartTask7_1.Size = new Size(486, 72);
+            StartTask7_1.TabIndex = 11;
+            StartTask7_1.Text = "Лабораторная работа 7_1";
+            StartTask7_1.UseVisualStyleBackColor = true;
+            StartTask7_1.Click += StartTask7_1_Click;
             // 
-            // button7
+            // StartTask8
             // 
-            button7.Font = new Font("Segoe Print", 15.75F);
-            button7.Location = new Point(583, 435);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(486, 72);
-            button7.TabIndex = 12;
-            button7.Text = "Лабораторная работа 7_1";
-            button7.UseVisualStyleBackColor = true;
+            StartTask8.Font = new Font("Segoe Print", 15.75F);
+            StartTask8.Location = new Point(583, 435);
+            StartTask8.Margin = new Padding(3, 4, 3, 4);
+            StartTask8.Name = "StartTask8";
+            StartTask8.Size = new Size(486, 72);
+            StartTask8.TabIndex = 12;
+            StartTask8.Text = "Лабораторная работа 8";
+            StartTask8.UseVisualStyleBackColor = true;
+            StartTask8.Click += StartTask8_Click;
             // 
-            // button8
+            // StartTask9
             // 
-            button8.Font = new Font("Segoe Print", 15.75F);
-            button8.Location = new Point(583, 515);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(486, 72);
-            button8.TabIndex = 13;
-            button8.Text = "Лабораторная работа 8";
-            button8.UseVisualStyleBackColor = true;
+            StartTask9.Font = new Font("Segoe Print", 15.75F);
+            StartTask9.Location = new Point(583, 515);
+            StartTask9.Margin = new Padding(3, 4, 3, 4);
+            StartTask9.Name = "StartTask9";
+            StartTask9.Size = new Size(486, 72);
+            StartTask9.TabIndex = 13;
+            StartTask9.Text = "Лабораторная работа 9";
+            StartTask9.UseVisualStyleBackColor = true;
+            // 
+            // StartTask10
+            // 
+            StartTask10.Font = new Font("Segoe Print", 15.75F);
+            StartTask10.Location = new Point(583, 595);
+            StartTask10.Margin = new Padding(3, 4, 3, 4);
+            StartTask10.Name = "StartTask10";
+            StartTask10.Size = new Size(486, 72);
+            StartTask10.TabIndex = 14;
+            StartTask10.Text = "Лабораторная работа 10";
+            StartTask10.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1125, 717);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
+            Controls.Add(StartTask10);
+            Controls.Add(StartTask9);
+            Controls.Add(StartTask8);
+            Controls.Add(StartTask7_1);
+            Controls.Add(StartTask6);
             Controls.Add(StartTask5_1);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
@@ -219,9 +235,9 @@
             Controls.Add(StartTask5_2);
             Controls.Add(StartTask4);
             Controls.Add(StartTask3_2);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(StartTask3_1);
+            Controls.Add(StartTask2);
+            Controls.Add(StartTask1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Menu";
             Text = "Menu";
@@ -232,9 +248,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button StartTask1;
+        private Button StartTask2;
+        private Button StartTask3_1;
         private Button StartTask3_2;
         private Button StartTask4;
         private Button StartTask5_2;
@@ -242,9 +258,10 @@
         private Label label2;
         private PictureBox pictureBox1;
         private Button StartTask5_1;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button StartTask6;
+        private Button StartTask7_1;
+        private Button StartTask8;
+        private Button StartTask9;
+        private Button StartTask10;
     }
 }
