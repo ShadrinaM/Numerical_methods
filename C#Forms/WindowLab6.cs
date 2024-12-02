@@ -15,8 +15,10 @@ namespace C_Forms
         private Label answerLabel = new Label();
         private Label absErrorLabel = new Label();
         private Label relErrorLabel = new Label();
-        private int n = 14;
+        private static int n = 14;
         private PlotModel plotModel = new PlotModel { Title = "График функции f(x)" };
+        //private static double b = (-6) * (n - 20) / 10 + 20, hx = (30 * n - n * n) / 10, a = 10 * hx / n;
+        private static double b = 32, hx = 22.4, a = 16;
 
         public WindowLab6(Menu menushka)
         {
@@ -29,7 +31,7 @@ namespace C_Forms
             plotModel = new PlotModel { Title = "График функции f(x)" };
             plotView = new PlotView { Model = plotModel, Dock = DockStyle.Top, Height = 300 };
 
-            InitializeUI();
+            WindowLab6_N1();
         }
 
 
@@ -38,7 +40,7 @@ namespace C_Forms
             mainForm.Show();
         }
 
-        private void InitializeUI()
+        private void WindowLab6_N1()
         {
             this.Size = new Size(1000, 600);
 
@@ -48,14 +50,14 @@ namespace C_Forms
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Y" });
 
             var functionSeries = new LineSeries { Title = "f(x)" };
-            for (double x = 0.0; x <= n; x += 0.2)
+            for (double x = 0.0; x < hx; x += 0.2)
             {
                 double y = 10 * x / n;
                 functionSeries.Points.Add(new DataPoint(x, y));
             }
-            for (double x = n; x <= 20; x += 0.2)
+            for (double x = hx; x <= b; x += 0.2)
             {
-                double y = 10 * (x - 20) / (n - 20);
+                double y = 10 * (x - 20) / (n - 20) + 20;
                 functionSeries.Points.Add(new DataPoint(x, y));
             }
             plotModel.Series.Add(functionSeries);
@@ -95,6 +97,9 @@ namespace C_Forms
             this.Controls.Add(plotView);
         }
 
+        /// <summary>
+        /// Выводит результаты
+        /// </summary>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(NTextBox.Text, out int N) || N <= 0)
@@ -106,7 +111,7 @@ namespace C_Forms
             var (area, randomPoints, innerPoints) = AreaCalculation(N);
             answerLabel.Text = $"Площадь треугольника: {Math.Round(area, 4)}";
 
-            double absError = Math.Abs(100.0 - area);
+            double absError = Math.Abs(256.0 - area);
             absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absError, 2)}";
 
             double relError = absError / 100.0;
@@ -142,10 +147,10 @@ namespace C_Forms
         /// </summary>
         private double F(double x)
         {
-            if (x < n)
+            if (x < hx)
                 return 10.0 * x / n;
             else
-                return 10.0 * (x - 20) / (n - 20);
+                return 10.0 * (x - 20) / (n - 20)+20;
         }
 
         /// <summary>
@@ -154,9 +159,7 @@ namespace C_Forms
         /// <param name="N">Количество точек</param>
         /// <returns> Кортеж из площади, списка рандомных точек и списка внутренних точек</returns>
         private (double, List<(double, double)>, List<(double, double)>) AreaCalculation(int N)
-        {
-            double a = 10.0, b = 20.0;
-
+        {      
             var randomPoints = new List<(double, double)>();
             var rand = new Random();
 
