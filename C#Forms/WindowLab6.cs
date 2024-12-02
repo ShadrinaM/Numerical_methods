@@ -70,7 +70,7 @@ namespace C_Forms
             };
 
             var NLabel = new Label { Text = "Введите количество точек N:", Location = new Point(10, 10), AutoSize = true };
-            NTextBox.Location = new Point(180, 10);
+            NTextBox.Location = new Point(250, 10);
 
             calculateButton.Text = "Рассчитать";
             calculateButton.Location = new Point(10, 50);
