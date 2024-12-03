@@ -358,22 +358,20 @@ namespace C_Forms
             // Настройка PlotView и модели графика
             plotView.Dock = DockStyle.Top;
             plotView.Height = 400;
-            plotModel = new PlotModel { Title = "Circle and Random Points" };
 
             // Создание окружности
             var circleSeries = new LineSeries { Color = OxyColors.Blue, MarkerType = MarkerType.None };
-            const double R = 4;
             for (double phi = 0; phi <= 2 * Math.PI; phi += 0.01)
             {
-                double x = R * Math.Cos(phi);
-                double y = R * Math.Sin(phi);
+                double x = n * Math.Cos(phi);
+                double y = n * Math.Sin(phi);
                 circleSeries.Points.Add(new DataPoint(x, y));
             }
             plotModel.Series.Add(circleSeries);
 
             // Настройка осей
-            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -R, Maximum = R, Title = "X" });
-            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -R, Maximum = R, Title = "Y" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -n, Maximum = n, Title = "X" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -n, Maximum = n, Title = "Y" });
 
             plotView.Model = plotModel;
 
@@ -429,13 +427,12 @@ namespace C_Forms
                 var innerPoints = new List<ScatterPoint>();
                 var outerPoints = new List<ScatterPoint>();
 
-                const double R = 4;
                 for (int i = 0; i < N; i++)
                 {
-                    double x = random.NextDouble() * 2 * R - R;
-                    double y = random.NextDouble() * 2 * R - R;
+                    double x = random.NextDouble() * 2 * n - n;
+                    double y = random.NextDouble() * 2 * n - n;
 
-                    if (x * x + y * y <= R * R)
+                    if (x * x + y * y <= n * n)
                         innerPoints.Add(new ScatterPoint(x, y));
                     else
                         outerPoints.Add(new ScatterPoint(x, y));
@@ -460,7 +457,7 @@ namespace C_Forms
                 absErrorLabel.Text = $"Абсолютная погрешность пи: {Math.Round(absError, 4)}";
 
                 double relError = absError / Math.PI;
-                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relError, 4)}:P2";
+                relErrorLabel.Text = $"Относительная погрешность пи: {Math.Round(relError, 4)}:P2";
 
                 // Обновление графика
                 plotView.InvalidatePlot(true);
