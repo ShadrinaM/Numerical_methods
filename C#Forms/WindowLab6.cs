@@ -17,7 +17,7 @@ namespace C_Forms
         private Label absErrorLabel = new Label();
         private Label relErrorLabel = new Label();
         private static int n = 14;
-        private PlotModel plotModel_1 = new PlotModel { Title = "График" };
+        private PlotModel plotModel = new PlotModel { Title = "График" };
         private static double b_1 = 32, hx_1 = 22.4, a_1 = 16;
 
         public WindowLab6(Menu menushka)
@@ -28,7 +28,7 @@ namespace C_Forms
             this.Size = new Size(1000, 600);
             this.FormClosed += WindowLab6_FormClosed;
 
-            plotView = new PlotView { Model = plotModel_1, Dock = DockStyle.Top, Height = 300 };
+            plotView = new PlotView { Model = plotModel, Dock = DockStyle.Top, Height = 300 };
         }
 
         private void WindowLab6_FormClosed(object sender, FormClosedEventArgs e)
@@ -39,9 +39,9 @@ namespace C_Forms
         private void ClearPlotAndControls()
         {
             // Очистка графика
-            plotModel_1.Axes.Clear();
-            plotModel_1.Series.Clear();
-            plotModel_1.Annotations.Clear();
+            plotModel.Axes.Clear();
+            plotModel.Series.Clear();
+            plotModel.Annotations.Clear();
 
             // Очистка элементов управления
             answerLabel.Text = string.Empty;
@@ -54,13 +54,13 @@ namespace C_Forms
 
         private void WindowLab6_N1()
         {
-            plotModel_1.Axes.Clear(); 
-            plotModel_1.Series.Clear(); 
-            plotModel_1.Annotations.Clear();
+            plotModel.Axes.Clear(); 
+            plotModel.Series.Clear(); 
+            plotModel.Annotations.Clear();
             plotView.Dock = DockStyle.Top;
             plotView.Height = 300;
-            plotModel_1.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "X" });
-            plotModel_1.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Y" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "X" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Y" });
 
 
             var functionSeries = new LineSeries { Title = "f(x)" };
@@ -74,8 +74,8 @@ namespace C_Forms
                 double y = 10 * (x - 20) / (n - 20) + 20;
                 functionSeries.Points.Add(new DataPoint(x, y));
             }
-            plotModel_1.Series.Add(functionSeries);
-            plotView.Model = plotModel_1;
+            plotModel.Series.Add(functionSeries);
+            plotView.Model = plotModel;
 
 
             var inputPanel = new Panel
@@ -144,15 +144,15 @@ namespace C_Forms
                 scatterSeriesOuter.Points.Add(new ScatterPoint(point.Item1, point.Item2));
             }
 
-            for (int i = plotModel_1.Series.Count - 1; i >= 0; i--)
+            for (int i = plotModel.Series.Count - 1; i >= 0; i--)
             {
-                if (plotModel_1.Series[i] is ScatterSeries)
+                if (plotModel.Series[i] is ScatterSeries)
                 {
-                    plotModel_1.Series.RemoveAt(i);
+                    plotModel.Series.RemoveAt(i);
                 }
             }
-            plotModel_1.Series.Add(scatterSeriesInner);
-            plotModel_1.Series.Add(scatterSeriesOuter);
+            plotModel.Series.Add(scatterSeriesInner);
+            plotModel.Series.Add(scatterSeriesOuter);
 
             plotView.InvalidatePlot(true);
         }
@@ -196,8 +196,8 @@ namespace C_Forms
             // Set up the axes
             var xAxis = new LinearAxis { Position = AxisPosition.Bottom, Title = "X", Minimum = 0 };
             var yAxis = new LinearAxis { Position = AxisPosition.Left, Title = "Y", Minimum = 0 };
-            plotModel_1.Axes.Add(xAxis);
-            plotModel_1.Axes.Add(yAxis);
+            plotModel.Axes.Add(xAxis);
+            plotModel.Axes.Add(yAxis);
 
             // Create a series for the function f(x)
             var functionSeries = new LineSeries { Title = "f(x)" };
@@ -206,7 +206,7 @@ namespace C_Forms
                 double y = F_N2(x);
                 functionSeries.Points.Add(new DataPoint(x, y));
             }
-            plotModel_1.Series.Add(functionSeries);
+            plotModel.Series.Add(functionSeries);
 
             // Add a vertical line at x = 5
             var verticalLine = new LineAnnotation
@@ -217,10 +217,10 @@ namespace C_Forms
                 LineStyle = LineStyle.Solid,
                 StrokeThickness = 2
             };
-            plotModel_1.Annotations.Add(verticalLine);
+            plotModel.Annotations.Add(verticalLine);
 
             // Add the PlotView to the form
-            plotView.Model = plotModel_1;
+            plotView.Model = plotModel;
 
             // Create the input panel with labels, textbox, and button
             var inputPanel = new Panel
@@ -297,13 +297,13 @@ namespace C_Forms
             if (!string.IsNullOrEmpty(NTextBox.Text))
             {
                 // Remove any existing points
-                var seriesToRemoveInner = plotModel_1.Series.FirstOrDefault(s => s.Title == "Внутренние точки") as ScatterSeries;
-                var seriesToRemoveOuter = plotModel_1.Series.FirstOrDefault(s => s.Title == "Внешние точки") as ScatterSeries;
+                var seriesToRemoveInner = plotModel.Series.FirstOrDefault(s => s.Title == "Внутренние точки") as ScatterSeries;
+                var seriesToRemoveOuter = plotModel.Series.FirstOrDefault(s => s.Title == "Внешние точки") as ScatterSeries;
 
                 if (seriesToRemoveInner != null && seriesToRemoveOuter != null)
                 {
-                    plotModel_1.Series.Remove(seriesToRemoveInner);
-                    plotModel_1.Series.Remove(seriesToRemoveOuter);
+                    plotModel.Series.Remove(seriesToRemoveInner);
+                    plotModel.Series.Remove(seriesToRemoveOuter);
                 }
 
                 // Parse the number of points
@@ -342,11 +342,11 @@ namespace C_Forms
                 }
 
                 // Add the scatter series to the plot
-                plotModel_1.Series.Add(scatterSeriesInner);
-                plotModel_1.Series.Add(scatterSeriesOuter);
+                plotModel.Series.Add(scatterSeriesInner);
+                plotModel.Series.Add(scatterSeriesOuter);
 
                 // Refresh the plot
-                plotView.Model = plotModel_1;
+                plotView.Model = plotModel;
                 plotView.InvalidatePlot(true);
             }
         }
