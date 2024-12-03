@@ -33,25 +33,29 @@ namespace C_Forms
             mainForm.Show();
         }
 
-        //private void ClearPlotAndControls()
-        //{
-        //    // Очистка графика
-        //    plotModel.Axes.Clear();
-        //    plotModel.Series.Clear();
-        //    plotModel.Annotations.Clear();
+        private void ClearFormExceptButtons()
+        {
+            foreach (Control control in this.Controls)
+            {
+                // Оставляем только кнопки с определёнными именами
+                if (control is Button button && button.Name != "Task1" && button.Name != "Task2" &&
+                    button.Name != "Task3" && button.Name != "Task4")
+                {
+                    control.Dispose();
+                }
+            }
+        }
 
-        //    // Очистка элементов управления
-        //    answerLabel.Text = string.Empty;
-        //    absErrorLabel.Text = string.Empty;
-        //    relErrorLabel.Text = string.Empty;
-
-        //    // Очистка текстового поля NTextBox_1
-        //    NTextBox.Clear();
-        //}
+        private void ClearPlotModel(PlotModel plotModel)
+        {
+            plotModel.Series.Clear(); // Очищаем все серии
+            plotModel.Annotations.Clear(); // Очищаем аннотации, если есть
+        }
 
 
         private void WindowLab6_N1()
         {
+            ClearPlotModel()
             //инициализация PlotModel и plotView
             PlotModel plotModel = new PlotModel { Title = "График" };
             plotView = new PlotView { Model = plotModel};
@@ -88,15 +92,16 @@ namespace C_Forms
             calculateButton.Text = "Рассчитать";
             calculateButton.Location = new Point(10, 50);
             calculateButton.Size = new Size(150, 30);
-            calculateButton.Click += CalculateButton_Click_N1;
+            // Используем анонимную функцию для передачи plotModel
+            calculateButton.Click += (sender, e) => CalculateButton_Click_N1(sender, e, plotModel);
 
             answerLabel.Location = new Point(10, 80);
             answerLabel.AutoSize = true;
 
-            absErrorLabel.Location = new Point(10, 110);
+            absErrorLabel.Location = new Point(10, 100);
             absErrorLabel.AutoSize = true;
 
-            relErrorLabel.Location = new Point(10, 140);
+            relErrorLabel.Location = new Point(10, 120);
             relErrorLabel.AutoSize = true;
 
             inputPanel.Controls.Add(NLabel);
@@ -110,8 +115,7 @@ namespace C_Forms
             this.Controls.Add(plotView);
         }
 
-
-        private void CalculateButton_Click_N1(object sender, EventArgs e)
+        private void CalculateButton_Click_N1(object sender, EventArgs e, PlotModel plotModel)
         {
             if (!int.TryParse(NTextBox.Text, out int N) || N <= 0)
             {
@@ -153,7 +157,6 @@ namespace C_Forms
             plotView.InvalidatePlot(true);
         }
 
-
         private double F_N1(double x)
         {
             if (x < hx_1)
@@ -182,7 +185,7 @@ namespace C_Forms
 
         private void Task1_Click(object sender, EventArgs e)
         {
-            //ClearPlotAndControls();  // Очищаем график и элементы управления
+            ClearFormExceptButtons();
             WindowLab6_N1();
         }
 
@@ -192,171 +195,175 @@ namespace C_Forms
 
 
 
-        //private void WindowLab6_N2()
-        //{
-        //    // Set up the axes
-        //    var xAxis = new LinearAxis { Position = AxisPosition.Bottom, Title = "X", Minimum = 0 };
-        //    var yAxis = new LinearAxis { Position = AxisPosition.Left, Title = "Y", Minimum = 0 };
-        //    plotModel.Axes.Add(xAxis);
-        //    plotModel.Axes.Add(yAxis);
+        private void WindowLab6_N2()
+        {
+            //инициализация PlotModel и plotView
+            PlotModel plotModel = new PlotModel { Title = "График" };
+            plotView = new PlotView { Model = plotModel };
+            plotView.Dock = DockStyle.Top;
+            plotView.Height = 300;
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "X", Minimum = 0 });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Y", Minimum = 0 });
 
-        //    // Create a series for the function f(x)
-        //    var functionSeries = new LineSeries { Title = "f(x)" };
-        //    for (double x = 0.0; x <= 5.5; x += 0.1)
-        //    {
-        //        double y = F_N2(x);
-        //        functionSeries.Points.Add(new DataPoint(x, y));
-        //    }
-        //    plotModel.Series.Add(functionSeries);
 
-        //    // Add a vertical line at x = 5
-        //    var verticalLine = new LineAnnotation
-        //    {
-        //        Type = LineAnnotationType.Vertical,
-        //        X = 5,
-        //        Color = OxyColors.Blue,
-        //        LineStyle = LineStyle.Solid,
-        //        StrokeThickness = 2
-        //    };
-        //    plotModel.Annotations.Add(verticalLine);
+            // добавление функции, площадь под которой равна интегралу
+            var functionSeries = new LineSeries { Title = "f(x)" };
+            for (double x = 0.0; x <= 5.5; x += 0.1)
+            {
+                double y = F_N2(x);
+                functionSeries.Points.Add(new DataPoint(x, y));
+            }
+            plotModel.Series.Add(functionSeries);
+            // добавление ограничения справо, т.к. верхняя граница интеграла 5
+            var verticalLine = new LineAnnotation
+            {
+                Type = LineAnnotationType.Vertical,
+                X = 5,
+                Color = OxyColors.Blue,
+                LineStyle = LineStyle.Solid,
+                StrokeThickness = 2
+            };
+            plotModel.Annotations.Add(verticalLine);
 
-        //    // Add the PlotView to the form
-        //    plotView.Model = plotModel;
+            //Добавление модели в окно
+            plotView.Model = plotModel;
 
-        //    // Create the input panel with labels, textbox, and button
-        //    var inputPanel = new Panel
-        //    {
-        //        Dock = DockStyle.Top,
-        //        Height = 300
-        //    };
+            // создание панели ввода и выводаn
+            var inputPanel = new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 300
+            };
 
-        //    var NLabel = new Label { Text = "Введите количество точек N:", Location = new Point(10, 10), AutoSize = true };
-        //    NTextBox.Location = new Point(250, 10);
+            var NLabel = new Label { Text = "Введите количество точек N:", Location = new Point(10, 10), AutoSize = true };
+            NTextBox.Location = new Point(250, 10);
 
-        //    calculateButton.Text = "Рассчитать";
-        //    calculateButton.Location = new Point(10, 50);
-        //    calculateButton.Size = new Size(150, 30);
-        //    calculateButton.Click += CalculateButton_Click_N2;
+            calculateButton.Text = "Рассчитать";
+            calculateButton.Location = new Point(10, 50);
+            calculateButton.Size = new Size(150, 30);
+            // Используем анонимную функцию для передачи plotModel
+            calculateButton.Click += (sender, e) => CalculateButton_Click_N2(sender, e, plotModel);
 
-        //    answerLabel.Location = new Point(10, 80);
-        //    answerLabel.AutoSize = true;
+            answerLabel.Location = new Point(10, 80);
+            answerLabel.AutoSize = true;
 
-        //    absErrorLabel.Location = new Point(10, 110);
-        //    absErrorLabel.AutoSize = true;
+            absErrorLabel.Location = new Point(10, 100);
+            absErrorLabel.AutoSize = true;
 
-        //    relErrorLabel.Location = new Point(10, 140);
-        //    relErrorLabel.AutoSize = true;
+            relErrorLabel.Location = new Point(10, 120);
+            relErrorLabel.AutoSize = true;
 
-        //    inputPanel.Controls.Add(NLabel);
-        //    inputPanel.Controls.Add(NTextBox);
-        //    inputPanel.Controls.Add(calculateButton);
-        //    inputPanel.Controls.Add(answerLabel);
-        //    inputPanel.Controls.Add(absErrorLabel);
-        //    inputPanel.Controls.Add(relErrorLabel);
+            inputPanel.Controls.Add(NLabel);
+            inputPanel.Controls.Add(NTextBox);
+            inputPanel.Controls.Add(calculateButton);
+            inputPanel.Controls.Add(answerLabel);
+            inputPanel.Controls.Add(absErrorLabel);
+            inputPanel.Controls.Add(relErrorLabel);
 
-        //    this.Controls.Add(inputPanel);
-        //    this.Controls.Add(plotView);
-        //}
+            this.Controls.Add(inputPanel);
+            this.Controls.Add(plotView);
+        }
 
-        //private double F_N2(double x)
-        //{
-        //    return Math.Sqrt(29 - 14 * Math.Pow(Math.Cos(x), 2));
-        //}
+        private double F_N2(double x)
+        {
+            return Math.Sqrt(29 - 14 * Math.Pow(Math.Cos(x), 2));
+        }
 
-        //private Tuple<double, List<(double, double)>, List<(double, double)>> AreaCalculation_N2(int N)
-        //{
-        //    double a = 5.38516, b = 5.0;
+        private Tuple<double, List<(double, double)>, List<(double, double)>> AreaCalculation_N2(int N)
+        {
+            double a = 5.38516, b = 5.0;
 
-        //    List<(double, double)> random_points = new List<(double, double)>();
-        //    Random rnd = new Random();
+            List<(double, double)> random_points = new List<(double, double)>();
+            Random rnd = new Random();
 
-        //    // Generate random points
-        //    for (int i = 0; i < N; i++)
-        //    {
-        //        double x = rnd.NextDouble() * b;
-        //        double y = rnd.NextDouble() * a;
-        //        random_points.Add((x, y));
-        //    }
+            // Generate random points
+            for (int i = 0; i < N; i++)
+            {
+                double x = rnd.NextDouble() * b;
+                double y = rnd.NextDouble() * a;
+                random_points.Add((x, y));
+            }
 
-        //    List<(double, double)> inner_points = new List<(double, double)>();
+            List<(double, double)> inner_points = new List<(double, double)>();
 
-        //    // Check which points are inside the function's curve
-        //    foreach ((double, double) point in random_points)
-        //    {
-        //        if (point.Item2 < F_N2(point.Item1))
-        //        {
-        //            inner_points.Add(point);
-        //        }
-        //    }
+            // Check which points are inside the function's curve
+            foreach ((double, double) point in random_points)
+            {
+                if (point.Item2 < F_N2(point.Item1))
+                {
+                    inner_points.Add(point);
+                }
+            }
 
-        //    double area = (inner_points.Count / (double)N) * a * b;
-        //    return new Tuple<double, List<(double, double)>, List<(double, double)>>(area, random_points, inner_points);
-        //}
+            double area = (inner_points.Count / (double)N) * a * b;
+            return new Tuple<double, List<(double, double)>, List<(double, double)>>(area, random_points, inner_points);
+        }
 
-        //private void CalculateButton_Click_N2(object sender, EventArgs e)
-        //{
-        //    if (!string.IsNullOrEmpty(NTextBox.Text))
-        //    {
-        //        // Remove any existing points
-        //        var seriesToRemoveInner = plotModel.Series.FirstOrDefault(s => s.Title == "Внутренние точки") as ScatterSeries;
-        //        var seriesToRemoveOuter = plotModel.Series.FirstOrDefault(s => s.Title == "Внешние точки") as ScatterSeries;
+        private void CalculateButton_Click_N2(object sender, EventArgs e, PlotModel plotModel)
+        {
+            if (!string.IsNullOrEmpty(NTextBox.Text))
+            {
+                // Remove any existing points
+                var seriesToRemoveInner = plotModel.Series.FirstOrDefault(s => s.Title == "Внутренние точки") as ScatterSeries;
+                var seriesToRemoveOuter = plotModel.Series.FirstOrDefault(s => s.Title == "Внешние точки") as ScatterSeries;
 
-        //        if (seriesToRemoveInner != null && seriesToRemoveOuter != null)
-        //        {
-        //            plotModel.Series.Remove(seriesToRemoveInner);
-        //            plotModel.Series.Remove(seriesToRemoveOuter);
-        //        }
+                if (seriesToRemoveInner != null && seriesToRemoveOuter != null)
+                {
+                    plotModel.Series.Remove(seriesToRemoveInner);
+                    plotModel.Series.Remove(seriesToRemoveOuter);
+                }
 
-        //        // Parse the number of points
-        //        int N = Int32.Parse(NTextBox.Text);
+                // Parse the number of points
+                int N = Int32.Parse(NTextBox.Text);
 
-        //        // Calculate the area using Monte Carlo method
-        //        var result = AreaCalculation_N2(N);
-        //        answerLabel.Text = $"Интеграл: {Math.Round(result.Item1, 4)}";
+                // Calculate the area using Monte Carlo method
+                var result = AreaCalculation_N2(N);
+                answerLabel.Text = $"Интеграл: {Math.Round(result.Item1, 4)}";
 
-        //        // Calculate and display errors
-        //        double exactValue = 14.8598209229187;
-        //        double absoluteError = Math.Abs(exactValue - result.Item1);
-        //        absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absoluteError, 4)}";
+                // Calculate and display errors
+                double exactValue = 23.4984;
+                double absoluteError = Math.Abs(exactValue - result.Item1);
+                absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absoluteError, 4)}";
 
-        //        double relativeError = absoluteError / exactValue;
-        //        relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}";
+                double relativeError = absoluteError / exactValue;
+                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}";
 
-        //        // Get random points and inner points
-        //        List<(double, double)> randomPoints = result.Item2;
-        //        List<(double, double)> innerPoints = result.Item3;
+                // Get random points and inner points
+                List<(double, double)> randomPoints = result.Item2;
+                List<(double, double)> innerPoints = result.Item3;
 
-        //        // Define the outer points (points that are not inside the function)
-        //        List<(double, double)> outerPoints = randomPoints.Except(innerPoints).ToList();
+                // Define the outer points (points that are not inside the function)
+                List<(double, double)> outerPoints = randomPoints.Except(innerPoints).ToList();
 
-        //        // Create ScatterSeries for inner and outer points
-        //        var scatterSeriesInner = new ScatterSeries { Title = "Внутренние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Orange, MarkerSize = 4 };
-        //        foreach (var point in innerPoints)
-        //        {
-        //            scatterSeriesInner.Points.Add(new ScatterPoint(point.Item1, point.Item2));
-        //        }
+                // Create ScatterSeries for inner and outer points
+                var scatterSeriesInner = new ScatterSeries { Title = "Внутренние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Orange, MarkerSize = 4 };
+                foreach (var point in innerPoints)
+                {
+                    scatterSeriesInner.Points.Add(new ScatterPoint(point.Item1, point.Item2));
+                }
 
-        //        var scatterSeriesOuter = new ScatterSeries { Title = "Внешние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Red, MarkerSize = 4 };
-        //        foreach (var point in outerPoints)
-        //        {
-        //            scatterSeriesOuter.Points.Add(new ScatterPoint(point.Item1, point.Item2));
-        //        }
+                var scatterSeriesOuter = new ScatterSeries { Title = "Внешние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Red, MarkerSize = 4 };
+                foreach (var point in outerPoints)
+                {
+                    scatterSeriesOuter.Points.Add(new ScatterPoint(point.Item1, point.Item2));
+                }
 
-        //        // Add the scatter series to the plot
-        //        plotModel.Series.Add(scatterSeriesInner);
-        //        plotModel.Series.Add(scatterSeriesOuter);
+                // Add the scatter series to the plot
+                plotModel.Series.Add(scatterSeriesInner);
+                plotModel.Series.Add(scatterSeriesOuter);
 
-        //        // Refresh the plot
-        //        plotView.Model = plotModel;
-        //        plotView.InvalidatePlot(true);
-        //    }
-        //}
+                // Refresh the plot
+                plotView.Model = plotModel;
+                plotView.InvalidatePlot(true);
+            }
+        }
 
 
         private void Task2_Click(object sender, EventArgs e)
         {
             //ClearPlotAndControls();
-            //WindowLab6_N2();
+            ClearFormExceptButtons();
+            WindowLab6_N2();
         }
 
 
