@@ -38,11 +38,7 @@ namespace C_Forms
 
         private void ClearPlotAndControls()
         {
-            // Очистка графика
-            plotModel.Axes.Clear();
-            plotModel.Series.Clear();
-            plotModel.Annotations.Clear();
-
+            plotModel = new PlotModel { Title = "График" };
             // Очистка элементов управления
             answerLabel.Text = string.Empty;
             absErrorLabel.Text = string.Empty;
@@ -50,6 +46,7 @@ namespace C_Forms
 
             // Очистка текстового поля NTextBox_1
             NTextBox.Clear();
+
         }
 
         private void WindowLab6_N1()
@@ -314,12 +311,12 @@ namespace C_Forms
                 answerLabel.Text = $"Интеграл: {Math.Round(result.Item1, 4)}";
 
                 // Calculate and display errors
-                double exactValue = 14.8598209229187;
+                double exactValue = 23.4984;
                 double absoluteError = Math.Abs(exactValue - result.Item1);
                 absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absoluteError, 4)}";
 
                 double relativeError = absoluteError / exactValue;
-                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}";
+                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}:P2";
 
                 // Get random points and inner points
                 List<(double, double)> randomPoints = result.Item2;
@@ -352,10 +349,132 @@ namespace C_Forms
         }
 
 
+
+
+
+
         private void WindowLab6_N3()
         {
+            // Настройка PlotView и модели графика
+            plotView.Dock = DockStyle.Top;
+            plotView.Height = 400;
+            plotModel = new PlotModel { Title = "Circle and Random Points" };
 
+            // Создание окружности
+            var circleSeries = new LineSeries { Color = OxyColors.Blue, MarkerType = MarkerType.None };
+            const double R = 4;
+            for (double phi = 0; phi <= 2 * Math.PI; phi += 0.01)
+            {
+                double x = R * Math.Cos(phi);
+                double y = R * Math.Sin(phi);
+                circleSeries.Points.Add(new DataPoint(x, y));
+            }
+            plotModel.Series.Add(circleSeries);
+
+            // Настройка осей
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -R, Maximum = R, Title = "X" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -R, Maximum = R, Title = "Y" });
+
+            plotView.Model = plotModel;
+
+            // Создание панели ввода
+            var inputPanel = new Panel
+            {
+                Dock = DockStyle.Top,
+                Height = 200
+            };
+
+            var NLabel = new Label { Text = "Введите количество точек N:", Location = new Point(10, 10), AutoSize = true };
+            NTextBox.Location = new Point(250, 10);
+
+            calculateButton.Text = "Рассчитать";
+            calculateButton.Location = new Point(10, 50);
+            calculateButton.Size = new Size(150, 30);
+            calculateButton.Click += CalculateButton_Click;
+
+            answerLabel.Location = new Point(10, 90);
+            answerLabel.AutoSize = true;
+
+            absErrorLabel.Location = new Point(10, 120);
+            absErrorLabel.AutoSize = true;
+
+            relErrorLabel.Location = new Point(10, 150);
+            relErrorLabel.AutoSize = true;
+
+            inputPanel.Controls.Add(NLabel);
+            inputPanel.Controls.Add(NTextBox);
+            inputPanel.Controls.Add(calculateButton);
+            inputPanel.Controls.Add(answerLabel);
+            inputPanel.Controls.Add(absErrorLabel);
+            inputPanel.Controls.Add(relErrorLabel);
+
+            this.Controls.Add(inputPanel);
+            this.Controls.Add(plotView);
         }
+
+        private void CalculateButton_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(NTextBox.Text, out int N))
+            {
+                // Удаляем предыдущие точки
+                for (int i = plotModel.Series.Count - 1; i >= 0; i--)
+                {
+                    if (plotModel.Series[i] is ScatterSeries)
+                    {
+                        plotModel.Series.RemoveAt(i);
+                    }
+                }
+
+                var random = new Random();
+                var innerPoints = new List<ScatterPoint>();
+                var outerPoints = new List<ScatterPoint>();
+
+                const double R = 4;
+                for (int i = 0; i < N; i++)
+                {
+                    double x = random.NextDouble() * 2 * R - R;
+                    double y = random.NextDouble() * 2 * R - R;
+
+                    if (x * x + y * y <= R * R)
+                        innerPoints.Add(new ScatterPoint(x, y));
+                    else
+                        outerPoints.Add(new ScatterPoint(x, y));
+                }
+
+                // Добавление точек на график
+                var innerSeries = new ScatterSeries { Title = "Внутренние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Orange, MarkerSize = 4 };
+                var outerSeries = new ScatterSeries { Title = "Внешние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Red, MarkerSize = 4 };
+
+                innerSeries.Points.AddRange(innerPoints);
+                outerSeries.Points.AddRange(outerPoints);
+
+                plotModel.Series.Add(innerSeries);
+                plotModel.Series.Add(outerSeries);
+
+                // Расчёт значения Pi
+                double piEstimate = 4.0 * innerPoints.Count / N;
+                answerLabel.Text = $"Число пи: {Math.Round(piEstimate, 4)}";
+
+                // Расчёт погрешностей
+                double absError = Math.Abs(Math.PI - piEstimate);
+                absErrorLabel.Text = $"Абсолютная погрешность пи: {Math.Round(absError, 4)}";
+
+                double relError = absError / Math.PI;
+                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relError, 4)}:P2";
+
+                // Обновление графика
+                plotView.InvalidatePlot(true);
+            }
+            else
+            {
+                MessageBox.Show("Введите корректное число точек.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+
 
         private void WindowLab6_N4()
         {
