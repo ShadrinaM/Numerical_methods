@@ -319,7 +319,7 @@ namespace C_Forms
                 absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absoluteError, 4)}";
 
                 double relativeError = absoluteError / exactValue;
-                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}:P2";
+                relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4):P2}";
 
                 // Get random points and inner points
                 List<(double, double)> randomPoints = result.Item2;
@@ -460,7 +460,7 @@ namespace C_Forms
                 absErrorLabel.Text = $"Абсолютная погрешность пи: {Math.Round(absError, 4)}";
 
                 double relError = absError / Math.PI;
-                relErrorLabel.Text = $"Относительная погрешность пи: {Math.Round(relError, 4)}:P2";
+                relErrorLabel.Text = $"Относительная погрешность пи: {Math.Round(relError, 4):P2}";
 
                 // Обновление графика
                 plotView.InvalidatePlot(true);
@@ -750,7 +750,7 @@ namespace C_Forms
             // Настройка PlotView
             plotView.Height = 300;
 
-            plotModel = new PlotModel { Title = "Figure and Random Points" };
+            //plotModel = new PlotModel { Title = "Figure and Random Points" };
 
             // Создание фигуры на графике
             var shapeSeries = new LineSeries { Color = OxyColors.Blue, MarkerType = MarkerType.None };
