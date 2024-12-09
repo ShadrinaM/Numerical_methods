@@ -30,12 +30,10 @@ namespace C_Forms
 
             plotView = new PlotView { Model = plotModel, Dock = DockStyle.Top, Height = 300 };
         }
-
         private void WindowLab6_FormClosed(object sender, FormClosedEventArgs e)
         {
             mainForm.Show();
         }
-
         private void ClearPlotAndControls()
         {
             plotModel = new PlotModel { Title = "График" };
@@ -48,6 +46,7 @@ namespace C_Forms
             NTextBox.Clear();
 
         }
+
 
         private void WindowLab6_N1()
         {
@@ -108,10 +107,6 @@ namespace C_Forms
             this.Controls.Add(inputPanel);
             this.Controls.Add(plotView);
         }
-
-        /// <summary>
-        /// Выводит результаты
-        /// </summary>
         private void CalculateButton_Click_N1(object sender, EventArgs e)
         {
             if (!int.TryParse(NTextBox.Text, out int N) || N <= 0)
@@ -156,10 +151,6 @@ namespace C_Forms
 
             plotView.InvalidatePlot(true);
         }
-
-        /// <summary>
-        /// Заданная функция
-        /// </summary>
         private double F_N1(double x)
         {
             if (x < hx_1)
@@ -167,12 +158,6 @@ namespace C_Forms
             else
                 return 10.0 * (x - 20) / (n - 20) + 20;
         }
-
-        /// <summary>
-        /// Вычисление площади треугольника
-        /// </summary>
-        /// <param name="N">Количество точек</param>
-        /// <returns> Кортеж из площади, списка рандомных точек и списка внутренних точек</returns>
         private (double, List<(double, double)>, List<(double, double)>) AreaCalculation_N1(int N)
         {
             var randomPoints = new List<(double, double)>();
@@ -190,6 +175,7 @@ namespace C_Forms
 
             return (area, randomPoints, innerPoints);
         }
+
 
         private void WindowLab6_N2()
         {
@@ -256,12 +242,10 @@ namespace C_Forms
             this.Controls.Add(inputPanel);
             this.Controls.Add(plotView);
         }
-
         private double F_N2(double x)
         {
             return Math.Sqrt(29 - 14 * Math.Pow(Math.Cos(x), 2));
         }
-
         private Tuple<double, List<(double, double)>, List<(double, double)>> AreaCalculation_N2(int N)
         {
             double a = 5.38516, b = 5.0;
@@ -291,7 +275,6 @@ namespace C_Forms
             double area = (inner_points.Count / (double)N) * a * b;
             return new Tuple<double, List<(double, double)>, List<(double, double)>>(area, random_points, inner_points);
         }
-
         private void CalculateButton_Click_N2(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(NTextBox.Text))
@@ -352,10 +335,6 @@ namespace C_Forms
         }
 
 
-
-
-
-
         private void WindowLab6_N3()
         {
             // Настройка PlotView и модели графика
@@ -412,7 +391,6 @@ namespace C_Forms
             this.Controls.Add(inputPanel);
             this.Controls.Add(plotView);
         }
-
         private void CalculateButton_Click_N3(object sender, EventArgs e)
         {
             if (int.TryParse(NTextBox.Text, out int N))
@@ -471,286 +449,11 @@ namespace C_Forms
             }
         }
 
-
-
-
-
-
-        //private void WindowLab6_N4()
-        //{
-        //    // Настройка PlotView
-        //    plotView.Height = 300;
-
-        //    plotModel = new PlotModel { Title = "Circle and Random Points" };
-
-        //    // Создание окружности
-        //    var circleSeries = new LineSeries { Color = OxyColors.Blue, MarkerType = MarkerType.None };
-        //    double A = 24.0, B = 4.0;
-
-        //    for (double theta = 0; theta <= 2 * Math.PI; theta += 0.01)
-        //    {
-        //        double r = Math.Sqrt(A * Math.Cos(theta) * Math.Cos(theta) + B * Math.Sin(theta) * Math.Sin(theta));
-        //        double x = r * Math.Cos(theta);
-        //        double y = r * Math.Sin(theta);
-        //        circleSeries.Points.Add(new DataPoint(x, y));
-        //    }
-        //    plotModel.Series.Add(circleSeries);
-
-        //    // Настройка осей
-        //    plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -A, Maximum = A });
-        //    plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -10.11927, Maximum = 10.11927 });
-
-        //    plotView.Model = plotModel;
-
-        //    // Создание панели для ввода и вывода
-        //    var inputPanel = new Panel
-        //    {
-        //        Dock = DockStyle.Top,
-        //        Height = 300
-        //    };
-
-        //    var NLabel = new Label { Text = "Введите количество точек N:", Location = new Point(10, 10), AutoSize = true };
-        //    NTextBox.Location = new Point(250, 10);
-
-        //    calculateButton.Text = "Рассчитать";
-        //    calculateButton.Location = new Point(10, 50);
-        //    calculateButton.Size = new Size(150, 30);
-        //    calculateButton.Click += (sender, e) =>
-        //    {
-        //        if (int.TryParse(NTextBox.Text, out int N))
-        //        {
-        //            // Удаляем предыдущие точки
-        //            for (int i = plotModel.Series.Count - 1; i >= 0; i--)
-        //            {
-        //                if (plotModel.Series[i] is ScatterSeries)
-        //                {
-        //                    plotModel.Series.RemoveAt(i);
-        //                }
-        //            }
-
-        //            // Вычисление площади и точек
-        //            var result = AreaCalculation_N4(N, A, B);
-
-        //            double area = result.Item1;
-        //            var randomPoints = result.Item2;
-        //            var innerPoints = result.Item3;
-        //            var outerPoints = randomPoints.Except(innerPoints).ToList();
-
-        //            // Обновление текстовых полей с результатами
-        //            answerLabel.Text = $"Площадь: {Math.Round(area, 4)}";
-        //            double absoluteError = Math.Abs(11 * Math.PI - area);
-        //            absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absoluteError, 2)}";
-        //            double relativeError = absoluteError / (11 * Math.PI);
-        //            relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}";
-
-        //            // Добавление точек на график
-        //            var scatterSeriesInner = new ScatterSeries { Title = "Внутренние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Orange, MarkerSize = 4 };
-        //            foreach (var point in innerPoints)
-        //            {
-        //                scatterSeriesInner.Points.Add(new ScatterPoint(point.Item1, point.Item2));
-        //            }
-
-        //            var scatterSeriesOuter = new ScatterSeries { Title = "Внешние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Red, MarkerSize = 4 };
-        //            foreach (var point in outerPoints)
-        //            {
-        //                scatterSeriesOuter.Points.Add(new ScatterPoint(point.Item1, point.Item2));
-        //            }
-
-        //            plotModel.Series.Add(scatterSeriesInner);
-        //            plotModel.Series.Add(scatterSeriesOuter);
-        //            plotView.InvalidatePlot(true);
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Введите корректное значение N.");
-        //        }
-        //    };
-
-        //    // Добавление элементов управления
-        //    inputPanel.Controls.Add(NLabel);
-        //    inputPanel.Controls.Add(NTextBox);
-        //    inputPanel.Controls.Add(calculateButton);
-        //    inputPanel.Controls.Add(answerLabel);
-        //    inputPanel.Controls.Add(absErrorLabel);
-        //    inputPanel.Controls.Add(relErrorLabel);
-
-        //    this.Controls.Add(inputPanel);
-        //    this.Controls.Add(plotView);
-        //}
-
-        //private Tuple<double, List<(double, double)>, List<(double, double)>> AreaCalculation_N4(int N, double A, double B)
-        //{
-        //    double a = Math.Sqrt(B), b = Math.Sqrt(A);
-
-        //    List<(double, double)> randomPoints = new List<(double, double)>();
-        //    Random rnd = new Random();
-
-        //    for (int i = 0; i < N; i++)
-        //    {
-        //        double x = rnd.NextDouble() * 2 * b - b;
-        //        double y = rnd.NextDouble() * 2 * a - a; //10.11927
-        //        randomPoints.Add((x, y));
-        //    }
-
-        //    List<(double, double)> innerPoints = new();
-        //    foreach (var point in randomPoints)
-        //    {
-        //        double x = point.Item1, y = point.Item2;
-        //        if (A * Math.Pow(x, 2) + B * Math.Pow(y, 2) > Math.Pow(Math.Pow(x, 2) + Math.Pow(y, 2), 2))
-        //        {
-        //            innerPoints.Add(point);
-        //        }
-        //    }
-
-        //    double area = (innerPoints.Count / (double)N) * a * b * 4;
-        //    return new Tuple<double, List<(double, double)>, List<(double, double)>>(area, randomPoints, innerPoints);
-        //}
-
-
-
-        //private void WindowLab6_N4()
-        //{
-        //    // Настройка PlotView
-        //    plotView.Height = 300;
-
-        //    plotModel = new PlotModel { Title = "Custom Boundary and Random Points" };
-
-        //    // Создание графика для уравнения
-        //    var boundarySeries = new LineSeries { Color = OxyColors.Blue, MarkerType = MarkerType.None };
-
-        //    for (double theta = 0; theta <= 2 * Math.PI; theta += 0.01)
-        //    {
-        //        double x = Math.Cos(theta);
-        //        double y = Math.Sin(theta);
-        //        double r = Math.Sqrt(x * x + y * y); // Нормализация вектора
-        //        double boundaryR = 24 * Math.Pow(x / r, 2) + 4 * Math.Pow(y / r, 2);
-        //        x = boundaryR * x / r;
-        //        y = boundaryR * y / r;
-        //        boundarySeries.Points.Add(new DataPoint(x, y));
-        //    }
-        //    plotModel.Series.Add(boundarySeries);
-
-        //    // Настройка осей
-        //    double maxBound = 15; // Подбираем максимальное значение осей
-        //    plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = -70, Maximum = 70 });
-        //    plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = -maxBound, Maximum = maxBound });
-
-        //    plotView.Model = plotModel;
-
-        //    // Создание панели для ввода и вывода
-        //    var inputPanel = new Panel
-        //    {
-        //        Dock = DockStyle.Top,
-        //        Height = 300
-        //    };
-
-        //    var NLabel = new Label { Text = "Введите количество точек N:", Location = new Point(10, 10), AutoSize = true };
-        //    NTextBox.Location = new Point(250, 10);
-
-        //    calculateButton.Text = "Рассчитать";
-        //    calculateButton.Location = new Point(10, 50);
-        //    calculateButton.Size = new Size(150, 30);
-        //    calculateButton.Click += (sender, e) =>
-        //    {
-        //        if (int.TryParse(NTextBox.Text, out int N))
-        //        {
-        //            // Удаляем предыдущие точки
-        //            for (int i = plotModel.Series.Count - 1; i >= 0; i--)
-        //            {
-        //                if (plotModel.Series[i] is ScatterSeries)
-        //                {
-        //                    plotModel.Series.RemoveAt(i);
-        //                }
-        //            }
-
-        //            // Вычисление площади и точек
-        //            var result = AreaCalculation_N4(N);
-
-        //            double area = result.Item1;
-        //            var randomPoints = result.Item2;
-        //            var innerPoints = result.Item3;
-        //            var outerPoints = randomPoints.Except(innerPoints).ToList();
-
-        //            // Обновление текстовых полей с результатами
-        //            answerLabel.Text = $"Площадь: {Math.Round(area, 4)}";
-        //            double absoluteError = Math.Abs(25 * Math.PI - area);
-        //            absErrorLabel.Text = $"Абсолютная погрешность: {Math.Round(absoluteError, 2)}";
-        //            double relativeError = absoluteError / (25 * Math.PI);
-        //            relErrorLabel.Text = $"Относительная погрешность: {Math.Round(relativeError, 4)}";
-
-        //            // Добавление точек на график
-        //            var scatterSeriesInner = new ScatterSeries { Title = "Внутренние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Orange, MarkerSize = 4 };
-        //            foreach (var point in innerPoints)
-        //            {
-        //                scatterSeriesInner.Points.Add(new ScatterPoint(point.Item1, point.Item2));
-        //            }
-
-        //            var scatterSeriesOuter = new ScatterSeries { Title = "Внешние точки", MarkerType = MarkerType.Circle, MarkerFill = OxyColors.Red, MarkerSize = 4 };
-        //            foreach (var point in outerPoints)
-        //            {
-        //                scatterSeriesOuter.Points.Add(new ScatterPoint(point.Item1, point.Item2));
-        //            }
-
-        //            plotModel.Series.Add(scatterSeriesInner);
-        //            plotModel.Series.Add(scatterSeriesOuter);
-        //            plotView.InvalidatePlot(true);
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Введите корректное значение N.");
-        //        }
-        //    };
-
-        //    // Добавление элементов управления
-        //    inputPanel.Controls.Add(NLabel);
-        //    inputPanel.Controls.Add(NTextBox);
-        //    inputPanel.Controls.Add(calculateButton);
-        //    inputPanel.Controls.Add(answerLabel);
-        //    inputPanel.Controls.Add(absErrorLabel);
-        //    inputPanel.Controls.Add(relErrorLabel);
-
-        //    this.Controls.Add(inputPanel);
-        //    this.Controls.Add(plotView);
-        //}
-
-        //private Tuple<double, List<(double, double)>, List<(double, double)>> AreaCalculation_N4(int N)
-        //{
-        //    double maxBound = 25;
-
-        //    List<(double, double)> randomPoints = new List<(double, double)>();
-        //    Random rnd = new Random();
-
-        //    for (int i = 0; i < N; i++)
-        //    {
-        //        double x = rnd.NextDouble() * 2 * maxBound - maxBound;
-        //        double y = rnd.NextDouble() * 2 * maxBound - maxBound;
-        //        randomPoints.Add((x, y));
-        //    }
-
-        //    List<(double, double)> innerPoints = new();
-        //    foreach (var point in randomPoints)
-        //    {
-        //        double x = point.Item1, y = point.Item2;
-        //        double r = Math.Sqrt(x * x + y * y); // Нормализация
-        //        double boundaryR = 24 * Math.Pow(x / r, 2) + 4 * Math.Pow(y / r, 2);
-        //        if (r <= boundaryR)
-        //        {
-        //            innerPoints.Add(point);
-        //        }
-        //    }
-
-        //    double area = (innerPoints.Count / (double)N) * (2 * maxBound) * (2 * maxBound);
-        //    return new Tuple<double, List<(double, double)>, List<(double, double)>>(area, randomPoints, innerPoints);
-        //}
-
-
-
+        
         private void WindowLab6_N4()
         {
             // Настройка PlotView
             plotView.Height = 300;
-
-            //plotModel = new PlotModel { Title = "Figure and Random Points" };
 
             // Создание фигуры на графике
             var shapeSeries = new LineSeries { Color = OxyColors.Blue, MarkerType = MarkerType.None };
@@ -849,7 +552,6 @@ namespace C_Forms
             this.Controls.Add(inputPanel);
             this.Controls.Add(plotView);
         }
-
         private Tuple<double, List<(double, double)>, List<(double, double)>> AreaCalculation_N4(int N)
         {
             
@@ -884,31 +586,25 @@ namespace C_Forms
         }
 
 
-
-
         private void Task1_Click(object sender, EventArgs e)
         {
             ClearPlotAndControls();  // Очищаем график и элементы управления
             WindowLab6_N1();
         }
-
         private void Task2_Click(object sender, EventArgs e)
         {
             ClearPlotAndControls();
             WindowLab6_N2();
         }
-
         private void Task3_Click(object sender, EventArgs e)
         {
             ClearPlotAndControls();
             WindowLab6_N3();
         }
-
         private void Task4_Click(object sender, EventArgs e)
         {
             ClearPlotAndControls();
             WindowLab6_N4();
         }
     }
-
 }
