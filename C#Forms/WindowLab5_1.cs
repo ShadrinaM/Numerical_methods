@@ -22,19 +22,11 @@ namespace C_Forms
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.mainForm = menushka;
-            this.FormClosed += WindowLab5_2_FormClosed;
+            this.FormClosed += WindowLab5_1_FormClosed;
             Lab51();
         }
-        private void BackToMenu_Click(object sender, EventArgs e)
+        private void WindowLab5_1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Показываем главное окно
-            mainForm.Show();
-            // Закрываем текущее окно
-            this.Close();
-        }
-        private void WindowLab5_2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // Показываем главное окно при закрытии текущего
             mainForm.Show();
         }
 

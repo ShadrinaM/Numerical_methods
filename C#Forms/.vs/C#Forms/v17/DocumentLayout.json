@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab5_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab5_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\windowlab6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,44 +22,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "WindowLab5_1.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_1.cs",
+              "RelativeDocumentMoniker": "WindowLab5_1.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_1.cs",
+              "RelativeToolTip": "WindowLab5_1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T18:49:37.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "WindowLab6.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab6.cs",
               "RelativeDocumentMoniker": "WindowLab6.cs",
               "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab6.cs [Design]",
               "RelativeToolTip": "WindowLab6.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:22:43.08Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WindowLab6.cs",
-              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab6.cs",
-              "RelativeDocumentMoniker": "WindowLab6.cs",
-              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab6.cs",
-              "RelativeToolTip": "WindowLab6.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGECAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:21:15.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WindowLab5_2.cs",
-              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_2.cs",
-              "RelativeDocumentMoniker": "WindowLab5_2.cs",
-              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_2.cs",
-              "RelativeToolTip": "WindowLab5_2.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:36:54.768Z"
+              "WhenOpened": "2024-12-01T22:22:43.08Z"
             },
             {
               "$type": "Document",
