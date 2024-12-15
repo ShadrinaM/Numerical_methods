@@ -13,24 +13,24 @@ using System.Windows.Forms;
 
 namespace C_Forms
 {
-    public partial class WindowLab8 : Form
+    public partial class WindowLabUCHP : Form
     {
         private Menu mainForm;
 
-        public WindowLab8(Menu menushka)
+        public WindowLabUCHP(Menu menushka)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.mainForm = menushka;
-            this.FormClosed += WindowLab8_FormClosed;
-            Lab8();
+            this.FormClosed += WindowLabUCHP_FormClosed;
+            LabUCHP();
         }
-        private void WindowLab8_FormClosed(object sender, FormClosedEventArgs e)
+        private void WindowLabUCHP_FormClosed(object sender, FormClosedEventArgs e)
         {
             mainForm.Show();
         }
 
-        void Lab8()
+        void LabUCHP()
         {
             
         }

@@ -13,24 +13,26 @@ using System.Windows.Forms;
 
 namespace C_Forms
 {
-    public partial class WindowLab8 : Form
+    public partial class WindowLab7_2 : Form
     {
         private Menu mainForm;
 
-        public WindowLab8(Menu menushka)
+        public WindowLab7_2(Menu menushka)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.mainForm = menushka;
-            this.FormClosed += WindowLab8_FormClosed;
-            Lab8();
+            this.FormClosed += WindowLab7_2_FormClosed;
+            Lab72();
         }
-        private void WindowLab8_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void WindowLab7_2_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Показываем главное окно при закрытии текущего
             mainForm.Show();
         }
 
-        void Lab8()
+        void Lab72()
         {
             
         }

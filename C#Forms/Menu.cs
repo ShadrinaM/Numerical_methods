@@ -63,5 +63,17 @@ namespace C_Forms
             window.Show();
             this.Hide();
         }
+
+        private void StartTask7_2_Click(object sender, EventArgs e)
+        {
+            WindowLab7_2 window = new WindowLab7_2(this);
+            window.Show();
+            this.Hide();
+        }
+
+        private void StartTaskUCHP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

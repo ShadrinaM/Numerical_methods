@@ -131,3 +131,4 @@ D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab6.resources
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab7_1.resources
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab8.resources
+D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab7_2.resources

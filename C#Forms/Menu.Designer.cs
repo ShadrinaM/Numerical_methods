@@ -42,8 +42,8 @@
             StartTask6 = new Button();
             StartTask7_1 = new Button();
             StartTask8 = new Button();
-            StartTask9 = new Button();
-            StartTask10 = new Button();
+            StartTask7_2 = new Button();
+            StartTaskUCHP = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -185,33 +185,35 @@
             StartTask8.UseVisualStyleBackColor = true;
             StartTask8.Click += StartTask8_Click;
             // 
-            // StartTask9
+            // StartTask7_2
             // 
-            StartTask9.Font = new Font("Segoe Print", 15.75F);
-            StartTask9.Location = new Point(510, 404);
-            StartTask9.Name = "StartTask9";
-            StartTask9.Size = new Size(425, 54);
-            StartTask9.TabIndex = 13;
-            StartTask9.Text = "Лабораторная работа 7_2";
-            StartTask9.UseVisualStyleBackColor = true;
+            StartTask7_2.Font = new Font("Segoe Print", 15.75F);
+            StartTask7_2.Location = new Point(510, 404);
+            StartTask7_2.Name = "StartTask7_2";
+            StartTask7_2.Size = new Size(425, 54);
+            StartTask7_2.TabIndex = 13;
+            StartTask7_2.Text = "Лабораторная работа 7_2";
+            StartTask7_2.UseVisualStyleBackColor = true;
+            StartTask7_2.Click += StartTask7_2_Click;
             // 
-            // StartTask10
+            // StartTaskUCHP
             // 
-            StartTask10.Font = new Font("Segoe Print", 15.75F);
-            StartTask10.Location = new Point(510, 464);
-            StartTask10.Name = "StartTask10";
-            StartTask10.Size = new Size(425, 54);
-            StartTask10.TabIndex = 14;
-            StartTask10.Text = "Лабораторная работа УЧП";
-            StartTask10.UseVisualStyleBackColor = true;
+            StartTaskUCHP.Font = new Font("Segoe Print", 15.75F);
+            StartTaskUCHP.Location = new Point(510, 464);
+            StartTaskUCHP.Name = "StartTaskUCHP";
+            StartTaskUCHP.Size = new Size(425, 54);
+            StartTaskUCHP.TabIndex = 14;
+            StartTaskUCHP.Text = "Лабораторная работа УЧП";
+            StartTaskUCHP.UseVisualStyleBackColor = true;
+            StartTaskUCHP.Click += StartTaskUCHP_Click;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(984, 561);
-            Controls.Add(StartTask10);
-            Controls.Add(StartTask9);
+            Controls.Add(StartTaskUCHP);
+            Controls.Add(StartTask7_2);
             Controls.Add(StartTask8);
             Controls.Add(StartTask7_1);
             Controls.Add(StartTask6);
@@ -247,7 +249,7 @@
         private Button StartTask6;
         private Button StartTask7_1;
         private Button StartTask8;
-        private Button StartTask9;
-        private Button StartTask10;
+        private Button StartTask7_2;
+        private Button StartTaskUCHP;
     }
 }
