@@ -30,9 +30,9 @@ namespace C_Forms
         {
             mainForm.Show();
         }
-
         void Lab71()
         {
+            numericUpDown1.Value = 32;
             // Заполняем первую строку значениями
             tableLayoutPanel1.Controls.Add(new Label { Text = "x", TextAlign = ContentAlignment.MiddleCenter }, 0, 0);
             for (int col = 0; col <= 20; col++)
@@ -49,6 +49,7 @@ namespace C_Forms
             tableLayoutPanel1.Controls.Add(new Label { Text = "erf(x)", TextAlign = ContentAlignment.MiddleCenter }, 0, 1);
             tableLayoutPanel1.Controls.Add(new Label { Text = "ERF(x)", TextAlign = ContentAlignment.MiddleCenter }, 0, 2);
             Lab7_1_N1();
+            Lab7_1_N3();
         }
         void Lab7_1_N1()
         {
@@ -104,19 +105,16 @@ namespace C_Forms
                 tableLayoutPanel1.Controls.Add(label, col + 1, 2); // Добавляем в третью строку
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Lab7_1_N2();
         }
-
         void Lab7_1_N2()
         {
-            int n = (int)numericUpDown1.Value; //число разбиений интеграла
-
+            int n = (int)numericUpDown1.Value; // число разбиений интеграла
 
             // Функция для вычисления значения подынтегрального выражения
-            double Function(double x)
+            double FunctionN2(double x)
             {
                 return 4.0 / (1 + x * x);
             }
@@ -150,29 +148,116 @@ namespace C_Forms
                 return sum * h;
             }
 
-            // Метод сплайн-квадратуры (на основе кубических сплайнов)
+            // Метод сплайн-квадратуры (реализация через кубические сплайны)
             double SplineQuadrature(Func<double, double> f, double a, double b, int n)
             {
-                // Для точности используем метод трапеций как основу
-                return TrapezoidalRule(f, a, b, n);
+                double h = (b - a) / n;
+                double[] xValues = new double[n + 1];
+                double[] yValues = new double[n + 1];
+
+                for (int i = 0; i <= n; i++)
+                {
+                    double x = a + i * h;
+                    xValues[i] = x;
+                    yValues[i] = f(x);
+                }
+
+                double integral = 0.0;
+                for (int i = 0; i < n; i++)
+                {
+                    h = xValues[i + 1] - xValues[i];
+                    integral += (h / 6) * (yValues[i] + 4 * f((xValues[i] + xValues[i + 1]) / 2) + yValues[i + 1]);
+                }
+
+                return integral;
             }
 
-            // Пределы интегрирования
+            // Integration limits
             double a = 0.0;
             double b = 1.0;
 
-            // Вычисление значений пи разными методами
-            double piTrapezoidal = TrapezoidalRule(Function, a, b, n);
-            double piMidpoint = MidpointRule(Function, a, b, n);
-            double piSpline = SplineQuadrature(Function, a, b, n);
+            // Compute π using different methods
+            double piTrapezoidal = TrapezoidalRule(FunctionN2, a, b, n);
+            double piMidpoint = MidpointRule(FunctionN2, a, b, n);
+            double piSpline = SplineQuadrature(FunctionN2, a, b, n);
 
-            // Вывод результатов
-            MessageBox.Show($"Приближённые значения числа π для {n} разбиений:\n" +
-                            $"Метод трапеций: {piTrapezoidal:F8}\n" +
-                            $"Метод прямоугольников: {piMidpoint:F8}\n" +
-                            $"Метод сплайн-квадратуры: {piSpline:F8}",
-                            "Результаты вычислений");
+            // True value of π
+            double truePi = Math.PI;
 
+            // Compute errors
+            double errorTrapezoidal = Math.Abs(truePi - piTrapezoidal);
+            double errorMidpoint = Math.Abs(truePi - piMidpoint);
+            double errorSpline = Math.Abs(truePi - piSpline);
+
+            // Display results with enlarged font
+            Font font = new Font("Segoe UI", 12, FontStyle.Regular);
+            Form messageBox = new Form()
+            {
+                Width = 600,
+                Height = 300,
+                Text = "Calculation Results"
+            };
+
+            Label label = new Label()
+            {
+                AutoSize = true,
+                Font = font,
+                Text = $"Приближённые значения числа π для {n} разбиений:\n" +
+                $"Метод трапеций:\n {piTrapezoidal:F8} " +
+                $"(ошибка: {errorTrapezoidal:F8}~h^2={Math.Pow(1.0 / n, 2):F8})\n" +
+                $"Метод прямоугольников:\n {piMidpoint:F8} " +
+                $"(ошибка: {errorMidpoint:F8}~h^2={Math.Pow(1.0 / n, 2):F8})\n" +
+                $"Метод сплайн-квадратуры:\n {piSpline:F8} " +
+                $"(ошибка: {errorSpline:F12}~h^4={Math.Pow(1.0 / n, 4):F12})",
+                Dock = DockStyle.Fill
+            };
+            messageBox.StartPosition = FormStartPosition.CenterScreen;
+            messageBox.Controls.Add(label);
+            messageBox.ShowDialog();
+        }
+        void Lab7_1_N3()
+        {
+            // Function definition
+            double FunctionN3(double x)
+            {
+                if (0 <= x && x <= 2)
+                    return Math.Exp(x * x);
+                if (2 < x && x <= 4)
+                    return 1.0 / (4 - Math.Sin(16 * Math.PI * x));
+                return 0; 
+            }
+            double SimpsonRule(Func<double, double> f, double a, double b, int n)
+            {
+                // n должно быть нечёт
+                if (n % 2 != 0)
+                {
+                    n++;
+                }
+
+                double h = (b - a) / (double)n;
+                double sum = f(a) + f(b);
+
+                for (int i = 1; i < n; i++)
+                {
+                    double x = a + i * h;
+                    if (i % 2 == 0)
+                    {
+                        sum += 2 * f(x);
+                    }
+                    else
+                    {
+                        sum += 4 * f(x);
+                    }
+                }
+
+                return (h / 3) * sum;
+            }
+            // пределы интегрирования
+            double a = 0.0;
+            double b = 4.0;
+            int n = 1000;
+
+            otvet.Text = "Мой ответ: " + SimpsonRule(FunctionN3, a, b, n) + "\nОнлайн калькулятор: 16.452628 + 0.51639778 = "+ (16.452628 + 0.51639778);
         }
     }
 }

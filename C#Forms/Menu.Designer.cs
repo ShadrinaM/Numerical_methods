@@ -192,7 +192,7 @@
             StartTask9.Name = "StartTask9";
             StartTask9.Size = new Size(425, 54);
             StartTask9.TabIndex = 13;
-            StartTask9.Text = "Лабораторная работа 9";
+            StartTask9.Text = "Лабораторная работа 7_2";
             StartTask9.UseVisualStyleBackColor = true;
             // 
             // StartTask10
@@ -202,7 +202,7 @@
             StartTask10.Name = "StartTask10";
             StartTask10.Size = new Size(425, 54);
             StartTask10.TabIndex = 14;
-            StartTask10.Text = "Лабораторная работа 10";
+            StartTask10.Text = "Лабораторная работа УЧП";
             StartTask10.UseVisualStyleBackColor = true;
             // 
             // Menu
