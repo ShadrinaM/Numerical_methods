@@ -191,7 +191,8 @@ namespace C_Forms
             tableLayoutPanel.RowCount = alphaValues.Length + 1;
             tableLayoutPanel.AutoSize = true;
             tableLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel.Location = new Point(9, 197);
+            Point point = label8.Location;
+            tableLayoutPanel.Location = point;
 
             // Добавляем заголовки
             tableLayoutPanel.Controls.Add(new Label { Text = "Alpha", AutoSize = true, Font = new Font("Arial", 10, FontStyle.Bold) }, 0, 0);
@@ -326,7 +327,8 @@ namespace C_Forms
             tableLayoutPanel.RowCount = alphaValues.Length + 1;
             tableLayoutPanel.AutoSize = true;
             tableLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel.Location = new Point(9, 370);
+            Point point = label9.Location;
+            tableLayoutPanel.Location = point;
 
             // Добавляем заголовки
             tableLayoutPanel.Controls.Add(new Label { Text = "Alpha", AutoSize = true, Font = new Font("Arial", 10, FontStyle.Bold) }, 0, 0);
