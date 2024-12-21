@@ -73,7 +73,9 @@ namespace C_Forms
 
         private void StartTaskUCHP_Click(object sender, EventArgs e)
         {
-
+            WindowLabUCHP window = new WindowLabUCHP(this);
+            window.Show();
+            this.Hide();
         }
     }
 }
