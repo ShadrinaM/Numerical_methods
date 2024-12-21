@@ -35,8 +35,7 @@ namespace C_Forms
         }
 
         void Lab72()
-        {
-            
+        {   
             // Заполняем первую строку значениями
             tableLayoutPanel1.Controls.Add(new Label { Text = "x", TextAlign = ContentAlignment.MiddleCenter }, 0, 0);
             for (int col = 0; col <= 20; col++)
@@ -55,8 +54,8 @@ namespace C_Forms
 
             resultBox.ScrollBars = ScrollBars.Vertical;
 
-            Lab7_1_N1();
             Lab7_2_N1();
+            
             Lab7_2_N2A();
             Lab7_2_N2B();
         }
@@ -116,9 +115,13 @@ namespace C_Forms
         }
         void Lab7_2_N1()
         {
+            double step = 0.1;
+            double maxX = 2.0;
 
-            double[] ComputeErfByODE(double step, double maxX)
-            {
+            var results = "Сравнение методов для вычисления erf(x):\r\n";
+
+            double[] MethodEuler(double step, double maxX)
+            { //пошаговый итерационный метод
                 int n = (int)(maxX / step) + 1;
                 double[] erfValues = new double[n];
                 double x = 0.0;
@@ -134,37 +137,11 @@ namespace C_Forms
                 return erfValues;
             }
 
-            string CompareTime(double step, double maxX)
-            {
-                var results = "Сравнение методов для вычисления erf(x):\r\n";
-
-                // Время для метода через ОДУ
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                double[] erfODE = ComputeErfByODE(step, maxX);
-                stopwatch.Stop();
-                TimeSpan durationODE = stopwatch.Elapsed;
-
-                results += string.Format("Время выполнения метода ОДУ: {0}\r\n", durationODE);
-
-                // Время для метода из ЛР6 (заглушка, так как оригинальная реализация недоступна)
-                stopwatch.Restart();
-                Lab7_1_N1(); // Метод из ЛР6
-                stopwatch.Stop();
-                TimeSpan durationLR6 = stopwatch.Elapsed;
-
-                results += string.Format("Время выполнения метода ЛР6: {0}\r\n", durationLR6);
-
-                return results;
-            }
-
-
-
-
-            double step = 0.1;
-            double maxX = 2.0;
-
-            // Вычисляем результаты через ОДУ
-            double[] erfODE = ComputeErfByODE(step, maxX);
+            // Время для метода через ОДУ
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            double[] erfODE = MethodEuler(step, maxX);
+            stopwatch.Stop();
+            TimeSpan durationODE = stopwatch.Elapsed;
 
             // Добавляем заголовок для четвертой строки
             tableLayoutPanel1.Controls.Add(new Label { Text = "ODE (erf(x))", TextAlign = ContentAlignment.MiddleCenter }, 0, 3);
@@ -180,9 +157,19 @@ namespace C_Forms
                 };
                 tableLayoutPanel1.Controls.Add(label, col + 1, 3); // Добавляем в четвёртую строку
             }
-            label1.Text = CompareTime(step, maxX);
+            results += string.Format("Время выполнения метода ОДУ: {0}\r\n", durationODE);
 
 
+
+            // Время для метода из ЛР7_1
+            stopwatch.Restart();
+            Lab7_1_N1();
+            stopwatch.Stop();
+            TimeSpan durationLR6 = stopwatch.Elapsed;
+            results += string.Format("Время выполнения метода ЛР6: {0}\r\n", durationLR6);
+
+            //Запись результата сравнения в label
+            label1.Text = results;
         }
         void Lab7_2_N2A()
         {
@@ -243,7 +230,7 @@ namespace C_Forms
 
             foreach (var cond in initialConditions)
             {
-                results += $"\nНачальные значения: r0={cond.r0}, f0={cond.f0}\r\n";
+                results += $"\n       Начальные значения: r0={cond.r0}, f0={cond.f0}\r\n";
 
                 // Решение системы уравнений
                 var (t, r, f) = RungeKutta(cond.r0, cond.f0, alpha, dt, tMax);
@@ -258,7 +245,7 @@ namespace C_Forms
             resultBox.AppendText(results);
             
         }
-        private void Lab7_2_N2B()
+        void Lab7_2_N2B()
         {
             // Функция для вычисления изменений dr/dt и df/dt
             (double dr, double df) DerivativesStop(double r, double f, double alpha)
@@ -369,8 +356,7 @@ namespace C_Forms
             RungeKuttaWithStop(1000, 1, alpha, dt, tMax, "Лисы");
 
             // Случай 3: Вымирание обоих видов
-            resultBox.AppendText("\r\nСлучай 3: Вымирание обоих видов (r0=1000, f0=1000)\r\n");
-            //RungeKuttaWithStop(1000, 1000, alpha, dt, tMax, "Оба вида");
+            resultBox.AppendText("\r\nСлучай 3: Вымирание обоих видов (r0=f0)\r\n");
             double r0 = 1.0;
             double r0Max = 1100.0; // Upper limit for search
             double step = 1.0;

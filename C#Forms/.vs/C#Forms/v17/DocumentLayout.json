@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\",
+  "WorkspaceRootPath": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\windowlab7_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab7_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab7_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\windowlab7_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\windowlab7_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab7_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\windowlab7_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\windowlab7_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab7_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\windowlab7_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab7_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab7_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\windowlab8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\windowlab8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\windowlab8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\windowlab5_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab5_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab5_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|d:\\\u0444\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0443\u0447\u0451\u0431\u0430\\\u0443\u0447\u0451\u0431\u0430 \u0432\u0443\u0437\\githubproject\\numerical_methods\\c#forms\\windowlab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|c:\\users\\marina\\documents\\github\\numerical_methods\\c#forms\\windowlab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE505296-A4C1-43AB-8D79-3DDCC9DDF08C}|C#Forms.csproj|solutionrelative:windowlab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,15 +50,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WindowLab7_2.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_2.cs",
+              "RelativeDocumentMoniker": "WindowLab7_2.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_2.cs",
+              "RelativeToolTip": "WindowLab7_2.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAgwHoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T23:46:58.251Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "WindowLab7_1.cs",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_1.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_1.cs",
               "RelativeDocumentMoniker": "WindowLab7_1.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_1.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_1.cs",
               "RelativeToolTip": "WindowLab7_1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -67,48 +80,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WindowLab7_2.cs",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_2.cs",
-              "RelativeDocumentMoniker": "WindowLab7_2.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_2.cs",
-              "RelativeToolTip": "WindowLab7_2.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAD4vxMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T23:46:58.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "WindowLab7_2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_2.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_2.cs",
               "RelativeDocumentMoniker": "WindowLab7_2.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "WindowLab7_2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T00:15:37.556Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-12-16T00:15:37.556Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "WindowLab7_1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_1.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab7_1.cs",
               "RelativeDocumentMoniker": "WindowLab7_1.cs",
               "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab7_1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "WindowLab7_1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T00:15:40.328Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-12-16T00:15:40.328Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
               "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\Menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T13:50:16.491Z"
             },
@@ -116,9 +114,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "WindowLab5_1.cs",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab5_1.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_1.cs",
               "RelativeDocumentMoniker": "WindowLab5_1.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab5_1.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_1.cs",
               "RelativeToolTip": "WindowLab5_1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -128,34 +126,31 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "WindowLab8.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab8.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab8.cs",
               "RelativeDocumentMoniker": "WindowLab8.cs",
               "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab8.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "WindowLab8.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:10:55.326Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-12-15T14:10:55.326Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "WindowLab8.cs",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab8.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab8.cs",
               "RelativeDocumentMoniker": "WindowLab8.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab8.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab8.cs",
               "RelativeToolTip": "WindowLab8.cs",
               "ViewState": "AgIAAMYAAAAAAAAAAAAWwG4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:02:30.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T14:02:30.259Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "WindowLab5_2.cs",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab5_2.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_2.cs",
               "RelativeDocumentMoniker": "WindowLab5_2.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\WindowLab5_2.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\WindowLab5_2.cs",
               "RelativeToolTip": "WindowLab5_2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -165,9 +160,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Menu.cs",
-              "DocumentMoniker": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
-              "ToolTip": "D:\\\u0424\u043E\u0442\u043E-\u0432\u0438\u0434\u0435\u043E \u0444\u0430\u0439\u043B\u044B  \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\\\u0423\u0447\u0451\u0431\u0430\\\u0423\u0447\u0451\u0431\u0430 \u0412\u0423\u0417\\Githubproject\\Numerical_methods\\C#Forms\\Menu.cs",
+              "ToolTip": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\Menu.cs",
               "RelativeToolTip": "Menu.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
