@@ -36,9 +36,10 @@
             // 
             // Task1
             // 
-            Task1.Location = new Point(18, 16);
+            Task1.Location = new Point(16, 12);
+            Task1.Margin = new Padding(3, 2, 3, 2);
             Task1.Name = "Task1";
-            Task1.Size = new Size(94, 29);
+            Task1.Size = new Size(82, 22);
             Task1.TabIndex = 0;
             Task1.Text = "Задание 1";
             Task1.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // Task2
             // 
-            Task2.Location = new Point(118, 16);
+            Task2.Location = new Point(103, 12);
+            Task2.Margin = new Padding(3, 2, 3, 2);
             Task2.Name = "Task2";
-            Task2.Size = new Size(94, 29);
+            Task2.Size = new Size(82, 22);
             Task2.TabIndex = 1;
             Task2.Text = "Задание 2";
             Task2.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // Task3
             // 
-            Task3.Location = new Point(218, 16);
+            Task3.Location = new Point(191, 12);
+            Task3.Margin = new Padding(3, 2, 3, 2);
             Task3.Name = "Task3";
-            Task3.Size = new Size(94, 29);
+            Task3.Size = new Size(82, 22);
             Task3.TabIndex = 2;
             Task3.Text = "Задание 3";
             Task3.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@
             // 
             // Task4
             // 
-            Task4.Location = new Point(318, 16);
+            Task4.Location = new Point(278, 12);
+            Task4.Margin = new Padding(3, 2, 3, 2);
             Task4.Name = "Task4";
-            Task4.Size = new Size(94, 29);
+            Task4.Size = new Size(82, 22);
             Task4.TabIndex = 3;
             Task4.Text = "Задание 4";
             Task4.UseVisualStyleBackColor = true;
@@ -76,13 +80,14 @@
             // 
             // WindowLab6
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1125, 748);
+            ClientSize = new Size(984, 561);
             Controls.Add(Task4);
             Controls.Add(Task3);
             Controls.Add(Task2);
             Controls.Add(Task1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "WindowLab6";
             Text = "WindowLab6";
             ResumeLayout(false);

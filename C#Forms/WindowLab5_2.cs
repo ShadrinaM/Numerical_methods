@@ -1,6 +1,4 @@
 ﻿using MathNet.Numerics.LinearAlgebra;
-using OxyPlot.Series;
-using OxyPlot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +9,8 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OxyPlot.Series;
+using OxyPlot;
 using OxyPlot.WindowsForms;
 
 namespace C_Forms

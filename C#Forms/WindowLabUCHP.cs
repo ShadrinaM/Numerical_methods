@@ -1,13 +1,12 @@
-﻿using System.Data;
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using ZedGraph;
+using OxyPlot;
+using OxyPlot.Series;
+using OxyPlot.WindowsForms;
 
 namespace C_Forms
 {
-
-
     public partial class WindowLabUCHP : Form
     {
         private Menu mainForm;
@@ -26,138 +25,193 @@ namespace C_Forms
             mainForm.Show();
         }
 
-        void LabUCHP()
+        private void LabUCHP()
         {
-            // Параметры
-            double L = Math.PI / 2;
-            double T = 1;
-            int Nx = 10;
-            int Nt = 2 * Nx * Nx;
+            double L = Math.PI / 2; // Длина области
+            double T = 1.0; // Время моделирования
+            int Nx = 10; // Количество узлов по пространству
+            int Nt = 2 * Nx * Nx; // Количество шагов по времени (условие стабильности)
 
-            double dx = L / (Nx - 0.5);
+            // Рассчёт явной схемы
+            var uExplicit = ExplicitScheme(L, T, Nx, Nt);
+            PlotResults(uExplicit, L, Nx, Nt, "Явная схема", plotView1);
+
+            // Рассчёт неявной схемы
+            var uImplicit = ImplicitScheme(L, T, Nx, Nt);
+            PlotResults(uImplicit, L, Nx, Nt, "Неявная сема", plotView2);
+
+            // Построение аналитического решения
+            PlotAnalyticalSolution(L, T, Nx, Nt, plotView3);
+
+            // Вычисление ошибок
+            double errorExplicit = CalculateError(uExplicit, L, T, Nx, Nt);
+            double errorImplicit = CalculateError(uImplicit, L, T, Nx, Nt);
+
+            // Вывод текстовой информации
+            textBox1.Text = "Среднняя ошибка для явной схеме: " + errorExplicit + "\r\n" +
+                            "Среднняя ошибка для неявной схеме: " + errorImplicit;
+        }
+
+        private double[,] ExplicitScheme(double L, double T, int Nx, int Nt)
+        {
+            double dx = L / (Nx - 1);
             double dt = T / Nt;
-
             double r = dt / (dx * dx);
 
-            double[] xValues = Enumerable.Range(0, Nx).Select(i => i * L / (Nx - 1)).ToArray();
-            double[] tValues = Enumerable.Range(0, Nt).Select(i => i * T / (Nt - 1)).ToArray();
+            if (r > 0.5)
+            {
+                textBox1.Text += $"\r\nВнимание: условие устойчивости нарушено (r = {r} > 0,5). Уменьшите dt или увеличьте Nx.";
+            }
 
-            double[,] u = new double[Nx, Nt];
-            double[,] u1 = new double[Nx, Nt];
+            double[,] u = new double[Nt, Nx];
 
-            // Начальные условия
             for (int i = 0; i < Nx; i++)
             {
-                u[i, 0] = Math.Sin(xValues[i]);
-                u1[i, 0] = Math.Sin(xValues[i]);
+                u[0, i] = Math.Sin(i * dx);
             }
 
-            // Граничные условия
-            for (int j = 0; j < Nt; j++)
-            {
-                u[0, j] = 0;
-                u[Nx - 1, j] = Math.Exp(-tValues[j]);
-                u1[0, j] = 0;
-                u1[Nx - 1, j] = Math.Exp(-tValues[j]);
-            }
-
-            // Явная разностная схема
             for (int t = 0; t < Nt - 1; t++)
             {
                 for (int x = 1; x < Nx - 1; x++)
                 {
-                    u[x, t + 1] = r * u[x - 1, t] + (1 - 2 * r) * u[x, t] + r * u[x + 1, t];
+                    u[t + 1, x] = r * u[t, x - 1] + (1 - 2 * r) * u[t, x] + r * u[t, x + 1];
                 }
+
+                u[t + 1, 0] = 0;
+                u[t + 1, Nx - 1] = Math.Exp(-(t + 1) * dt);
             }
 
-            // Неявная разностная схема
-            for (int t = 0; t < Nt - 1; t++)
-            {
-                double[,] A = new double[Nx - 1, Nx - 1];
-                double[] b = new double[Nx - 1];
-
-                for (int i = 0; i < Nx - 1; i++)
-                {
-                    A[i, i] = 1 + 2 * r;
-                    if (i > 0) A[i, i - 1] = -r;
-                    if (i < Nx - 2) A[i, i + 1] = -r;
-                }
-
-                for (int i = 0; i < Nx - 1; i++)
-                {
-                    b[i] = u1[i + 1, t];
-                    if (i == 0) b[i] += r * u1[0, t + 1];
-                    if (i == Nx - 2) b[i] += r * u1[Nx - 1, t + 1];
-                }
-
-                double[] solution = SolveLinearSystem(A, b);
-                for (int i = 0; i < Nx - 1; i++)
-                {
-                    u1[i + 1, t + 1] = solution[i];
-                }
-            }
-
-            // Визуализация
-            PlotSolution("Явная схема", xValues, tValues, u);
-            PlotSolution("Неявная схема", xValues, tValues, u1);
+            return u;
         }
 
-        double[] SolveLinearSystem(double[,] A, double[] b)
+        private double[,] ImplicitScheme(double L, double T, int Nx, int Nt)
         {
-            // Решение системы линейных уравнений методом Гаусса
-            int n = b.Length;
-            double[] x = new double[n];
-            double[,] matrix = (double[,])A.Clone();
-            double[] rhs = (double[])b.Clone();
+            double dx = L / (Nx - 1);
+            double dt = T / Nt;
+            double r = dt / (dx * dx);
 
-            for (int k = 0; k < n; k++)
+            double[,] u = new double[Nt, Nx];
+
+            for (int i = 0; i < Nx; i++)
             {
-                for (int i = k + 1; i < n; i++)
+                u[0, i] = Math.Sin(i * dx);
+            }
+
+            double[] a = Enumerable.Repeat(-r, Nx - 2).ToArray();
+            double[] b = Enumerable.Repeat(1 + 2 * r, Nx - 2).ToArray();
+            double[] c = Enumerable.Repeat(-r, Nx - 2).ToArray();
+            double[] d = new double[Nx - 2];
+
+            for (int t = 0; t < Nt - 1; t++)
+            {
+                for (int i = 0; i < Nx - 2; i++)
                 {
-                    double factor = matrix[i, k] / matrix[k, k];
-                    for (int j = k; j < n; j++)
-                    {
-                        matrix[i, j] -= factor * matrix[k, j];
-                    }
-                    rhs[i] -= factor * rhs[k];
+                    d[i] = u[t, i + 1];
+                }
+
+                d[0] += r * u[t + 1, 0];
+                d[Nx - 3] += r * u[t + 1, Nx - 1];
+
+                double[] solution = ThomasAlgorithm(a, b, c, d);
+
+                for (int i = 0; i < Nx - 2; i++)
+                {
+                    u[t + 1, i + 1] = solution[i];
                 }
             }
 
-            for (int i = n - 1; i >= 0; i--)
+            return u;
+        }
+
+        private double[] ThomasAlgorithm(double[] a, double[] b, double[] c, double[] d)
+        {
+            int n = b.Length;
+            double[] cPrime = new double[n];
+            double[] dPrime = new double[n];
+
+            cPrime[0] = c[0] / b[0];
+            dPrime[0] = d[0] / b[0];
+
+            for (int i = 1; i < n; i++)
             {
-                x[i] = rhs[i];
-                for (int j = i + 1; j < n; j++)
-                {
-                    x[i] -= matrix[i, j] * x[j];
-                }
-                x[i] /= matrix[i, i];
+                double denominator = b[i] - a[i] * cPrime[i - 1];
+                cPrime[i] = c[i] / denominator;
+                dPrime[i] = (d[i] - a[i] * dPrime[i - 1]) / denominator;
+            }
+
+            double[] x = new double[n];
+            x[n - 1] = dPrime[n - 1];
+
+            for (int i = n - 2; i >= 0; i--)
+            {
+                x[i] = dPrime[i] - cPrime[i] * x[i + 1];
             }
 
             return x;
         }
 
-        void PlotSolution(string title, double[] xValues, double[] tValues, double[,] u)
+        private double CalculateError(double[,] u, double L, double T, int Nx, int Nt)
         {
-            var graph = new ZedGraphControl();
-            //graph.Dock = DockStyle.Fill;
-            this.Controls.Add(graph);
+            double dx = L / (Nx - 1);
+            double dt = T / Nt;
+            double error = 0.0;
 
-            var pane = graph.GraphPane;
-            pane.Title.Text = title;
-            pane.XAxis.Title.Text = "X";
-            pane.YAxis.Title.Text = "T";
-
-            for (int i = 0; i < tValues.Length; i += tValues.Length / 10)
+            for (int t = 0; t < Nt; t++)
             {
-                var curve = pane.AddCurve($"t = {tValues[i]:F2}",
-                    new PointPairList(xValues, Enumerable.Range(0, xValues.Length).Select(x => u[x, i]).ToArray()),
-                    System.Drawing.Color.Blue,
-                    SymbolType.None);
+                for (int x = 0; x < Nx; x++)
+                {
+                    double analytical = AnalyticalSolution(x * dx, t * dt);
+                    error += Math.Abs(u[t, x] - analytical);
+                }
             }
 
-            graph.AxisChange();
-            graph.Refresh();
+            return error / (Nx * Nt);
+        }
+
+        private double AnalyticalSolution(double x, double t)
+        {
+            return Math.Exp(-t) * Math.Sin(x);
+        }
+
+        private void PlotResults(double[,] u, double L, int Nx, int Nt, string title, PlotView plotView)
+        {
+            var model = new PlotModel { Title = title };
+            double dx = L / (Nx - 1);
+
+            for (int t = 0; t < Nt; t += Nt / 5)
+            {
+                var series = new LineSeries { Title = $"t = {t}" };
+
+                for (int x = 0; x < Nx; x++)
+                {
+                    series.Points.Add(new DataPoint(x * dx, u[t, x]));
+                }
+
+                model.Series.Add(series);
+            }
+
+            plotView.Model = model;
+        }
+
+        private void PlotAnalyticalSolution(double L, double T, int Nx, int Nt, PlotView plotView)
+        {
+            var model = new PlotModel { Title = "Аналит. реш." };
+            double dx = L / (Nx - 1);
+            double dt = T / Nt;
+
+            for (int t = 0; t < Nt; t += Nt / 5)
+            {
+                var series = new LineSeries { Title = $"t = {t}" };
+
+                for (int x = 0; x < Nx; x++)
+                {
+                    series.Points.Add(new DataPoint(x * dx, AnalyticalSolution(x * dx, t * dt)));
+                }
+
+                model.Series.Add(series);
+            }
+
+            plotView.Model = model;
         }
     }
-
 }

@@ -24,9 +24,7 @@
     <Compile Update="WindowLab7_2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WindowLabUCHP.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="WindowLabUCHP.cs" />
     <Compile Update="WindowLab8.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -19,5 +19,8 @@
     <Compile Update="WindowLab6.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="WindowLabUCHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
