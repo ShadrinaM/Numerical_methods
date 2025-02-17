@@ -28,10 +28,15 @@ namespace C_Forms
         private void LabUCHP()
         {
             double L = Math.PI / 2; // Длина области
-            double T = 1.0; // Время моделирования
+            numericUpDown1.Value = 1;
+            double T = (double)numericUpDown1.Value; // Время моделирования
             int Nx = 10; // Количество узлов по пространству
             int Nt = 2 * Nx * Nx; // Количество временных шагов, вычисляемое для соблюдения условия устойчивости
+            CalculateЫolutions(L, T, Nx, Nt);
+        }
 
+        void CalculateЫolutions(double L, double T, int Nx, int Nt)
+        {
             // Рассчёт явной схемы
             var uExplicit = ExplicitScheme(L, T, Nx, Nt);
             PlotResults(uExplicit, L, Nx, Nt, "Явная схема", plotView1);
@@ -92,49 +97,6 @@ namespace C_Forms
 
         // Реализация неявной разностной схемы
         // Устойчива для любых r, но требует решения системы линейных уравнений.
-        //private double[,] ImplicitScheme(double L, double T, int Nx, int Nt)
-        //{
-        //    double dx = L / (Nx - 1); // Шаг по пространству
-        //    double dt = T / Nt; // Шаг по времени
-        //    double r = dt / (dx * dx); // Параметр устойчивости
-
-        //    double[,] u = new double[Nt, Nx]; // Сетка решения
-
-        //    // Задаем начальные условия
-        //    for (int i = 0; i < Nx; i++)
-        //    {
-        //        u[0, i] = Math.Sin(i * dx);
-        //    }
-
-        //    // Коэффициенты трехдиагональной матрицы
-        //    double[] a = Enumerable.Repeat(-r, Nx - 2).ToArray();
-        //    double[] b = Enumerable.Repeat(1 + 2 * r, Nx - 2).ToArray();
-        //    double[] c = Enumerable.Repeat(-r, Nx - 2).ToArray();
-        //    double[] d = new double[Nx - 2];
-
-        //    for (int t = 0; t < Nt - 1; t++)
-        //    {
-        //        // Формируем правую часть системы
-        //        for (int i = 0; i < Nx - 2; i++)
-        //        {
-        //            d[i] = u[t, i + 1];
-        //        }
-
-        //        d[0] += r * u[t + 1, 0];
-        //        d[Nx - 3] += r * u[t + 1, Nx - 1];
-
-        //        // Решаем систему методом Томаса
-        //        double[] solution = ThomasAlgorithm(a, b, c, d);
-
-        //        // Записываем результат в сетку
-        //        for (int i = 0; i < Nx - 2; i++)
-        //        {
-        //            u[t + 1, i + 1] = solution[i];
-        //        }
-        //    }
-
-        //    return u;
-        //}
         private double[,] ImplicitScheme(double L, double T, int Nx, int Nt)
         {
             double dx = L / (Nx - 1);
@@ -283,6 +245,15 @@ namespace C_Forms
             }
 
             plotView.Model = model;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double L = Math.PI / 2; // Длина области
+            double T = (double)numericUpDown1.Value; // Время моделирования
+            int Nx = 10; // Количество узлов по пространству
+            int Nt = 2 * Nx * Nx; // Количество временных шагов, вычисляемое для соблюдения условия устойчивости
+            CalculateЫolutions(L, T, Nx, Nt);
         }
     }
 }

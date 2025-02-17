@@ -149,3 +149,17 @@ D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\tr\ZedGraph.resources.dll
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\zh-CN\ZedGraph.resources.dll
 D:\Фото-видео файлы  оригинал\Учёба\Учёба ВУЗ\Githubproject\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\zh-TW\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\ZedGraph.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\de\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\es\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\fr\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\hu\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\it\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\ja\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\pt\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\ru\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\sk\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\sv\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\tr\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\zh-CN\ZedGraph.resources.dll
+C:\Users\Marina\Documents\GitHub\Numerical_methods\C#Forms\bin\Debug\net8.0-windows\zh-TW\ZedGraph.resources.dll

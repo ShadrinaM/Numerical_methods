@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj": {}
+    "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj": {}
   },
   "projects": {
-    "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj": {
+    "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+        "projectUniqueName": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
         "projectName": "C#Forms",
-        "projectPath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\C#Forms.csproj",
-        "packagesPath": "C:\\Users\\MM Shadrina\\.nuget\\packages\\",
-        "outputPath": "D:\\Фото-видео файлы  оригинал\\Учёба\\Учёба ВУЗ\\Githubproject\\Numerical_methods\\C#Forms\\obj\\",
+        "projectPath": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\C#Forms.csproj",
+        "packagesPath": "C:\\Users\\Marina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marina\\Documents\\GitHub\\Numerical_methods\\C#Forms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MM Shadrina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
