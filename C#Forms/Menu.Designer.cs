@@ -56,6 +56,7 @@
             StartTask1.TabIndex = 0;
             StartTask1.Text = "Лабораторная работа 1";
             StartTask1.UseVisualStyleBackColor = true;
+            StartTask1.Click += StartTask1_Click;
             // 
             // StartTask2
             // 

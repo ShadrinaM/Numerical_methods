@@ -77,5 +77,12 @@ namespace C_Forms
             window.Show();
             this.Hide();
         }
+
+        private void StartTask1_Click(object sender, EventArgs e)
+        {
+            WindowLab1 window = new WindowLab1(this);
+            window.Show();
+            this.Hide();
+        }
     }
 }

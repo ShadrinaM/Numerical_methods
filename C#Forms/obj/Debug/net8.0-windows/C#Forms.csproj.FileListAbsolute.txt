@@ -209,3 +209,4 @@ M:\Git\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\refint\C#Forms.dll
 M:\Git\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.pdb
 M:\Git\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C#Forms.genruntimeconfig.cache
 M:\Git\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\ref\C#Forms.dll
+M:\Git\Numerical_methods\C#Forms\obj\Debug\net8.0-windows\C_Forms.WindowLab1.resources
